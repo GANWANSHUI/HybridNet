@@ -1,0 +1,686 @@
+[2021-01-09 11:49:49 main.py:140] INFO     len train_left_img: 35454
+[2021-01-09 11:49:49 main.py:141] INFO     len test_left_img: 4370
+[2021-01-09 11:49:49 main.py:146] INFO     CSPN_step: 4
+[2021-01-09 11:49:49 main.py:146] INFO     activation_types1: ELU
+[2021-01-09 11:49:49 main.py:146] INFO     activation_types2: Relu
+[2021-01-09 11:49:49 main.py:146] INFO     conv_3d_types1: DSM
+[2021-01-09 11:49:49 main.py:146] INFO     conv_3d_types2: 2D
+[2021-01-09 11:49:49 main.py:146] INFO     cost_volume: Difference
+[2021-01-09 11:49:49 main.py:146] INFO     datapath: /data6/wsgan/SenceFlow/train/
+[2021-01-09 11:49:49 main.py:146] INFO     distributed: True
+[2021-01-09 11:49:49 main.py:146] INFO     epochs: 35
+[2021-01-09 11:49:49 main.py:146] INFO     keep_batchnorm_fp32: None
+[2021-01-09 11:49:49 main.py:146] INFO     local_rank: 0
+[2021-01-09 11:49:49 main.py:146] INFO     loss_scale: None
+[2021-01-09 11:49:49 main.py:146] INFO     loss_weights: [0.5, 0.7, 1.0, 1.0, 1.0]
+[2021-01-09 11:49:49 main.py:146] INFO     lr: 0.002
+[2021-01-09 11:49:49 main.py:146] INFO     maxdisp: 192
+[2021-01-09 11:49:49 main.py:146] INFO     model_types: Hybrid_Net_DSM
+[2021-01-09 11:49:49 main.py:146] INFO     opt_level: O0
+[2021-01-09 11:49:49 main.py:146] INFO     print_freq: 400
+[2021-01-09 11:49:49 main.py:146] INFO     residual_disparity_range: 3
+[2021-01-09 11:49:49 main.py:146] INFO     resume: None
+[2021-01-09 11:49:49 main.py:146] INFO     save_path: ./result/sceneflow/
+[2021-01-09 11:49:49 main.py:146] INFO     seed: 1
+[2021-01-09 11:49:49 main.py:146] INFO     sync_bn: True
+[2021-01-09 11:49:49 main.py:146] INFO     test_bsize: 1
+[2021-01-09 11:49:49 main.py:146] INFO     train: True
+[2021-01-09 11:49:49 main.py:146] INFO     train_bsize: 2
+[2021-01-09 11:49:49 main.py:146] INFO     with_cspn: True
+[2021-01-09 11:49:49 main.py:146] INFO     with_residual_cost: True
+[2021-01-09 11:49:49 main.py:146] INFO     world_size: 8
+[2021-01-09 11:49:53 main.py:169] INFO     using apex synced BN-----------------------------------------------------
+[2021-01-09 11:49:53 main.py:185] INFO     using distributed-----------------------------------------------------
+[2021-01-09 11:49:55 main.py:190] INFO     Number of model parameters: 1091336
+[2021-01-09 11:49:55 main.py:213] INFO     Not Resume
+[2021-01-09 11:49:55 main.py:227] INFO     This is 0-th epoch
+[2021-01-09 11:49:58 main.py:321] INFO     losses　　Epoch0 [0/2216] Stage 0 = 55.54(55.54)	Stage 1 = 58.15(58.15)	Stage 2 = 56.48(56.48)	Stage 3 = 56.51(56.51)	Stage 4 = 56.91(56.91)
+[2021-01-09 11:49:58 main.py:327] INFO     losses_pix　　Epoch0 [0/2216] Stage 0 = 0.991(0.991)	Stage 1 = 0.991(0.991)	Stage 2 = 0.990(0.990)	Stage 3 = 0.990(0.990)	Stage 4 = 0.990(0.990)
+[2021-01-09 11:59:46 main.py:321] INFO     losses　　Epoch0 [400/2216] Stage 0 = 6.42(9.75)	Stage 1 = 6.11(9.06)	Stage 2 = 5.93(8.83)	Stage 3 = 5.77(8.75)	Stage 4 = 5.64(8.71)
+[2021-01-09 11:59:46 main.py:327] INFO     losses_pix　　Epoch0 [400/2216] Stage 0 = 0.506(0.664)	Stage 1 = 0.497(0.636)	Stage 2 = 0.501(0.637)	Stage 3 = 0.422(0.618)	Stage 4 = 0.421(0.614)
+[2021-01-09 12:09:36 main.py:321] INFO     losses　　Epoch0 [800/2216] Stage 0 = 5.62(7.91)	Stage 1 = 5.45(7.36)	Stage 2 = 5.38(7.18)	Stage 3 = 5.21(7.06)	Stage 4 = 5.05(6.95)
+[2021-01-09 12:09:36 main.py:327] INFO     losses_pix　　Epoch0 [800/2216] Stage 0 = 0.470(0.573)	Stage 1 = 0.449(0.553)	Stage 2 = 0.441(0.552)	Stage 3 = 0.374(0.506)	Stage 4 = 0.374(0.502)
+[2021-01-09 12:19:27 main.py:321] INFO     losses　　Epoch0 [1200/2216] Stage 0 = 5.88(7.06)	Stage 1 = 5.68(6.54)	Stage 2 = 5.73(6.37)	Stage 3 = 5.55(6.24)	Stage 4 = 5.34(6.10)
+[2021-01-09 12:19:27 main.py:327] INFO     losses_pix　　Epoch0 [1200/2216] Stage 0 = 0.385(0.529)	Stage 1 = 0.382(0.512)	Stage 2 = 0.389(0.509)	Stage 3 = 0.307(0.454)	Stage 4 = 0.299(0.450)
+[2021-01-09 12:29:18 main.py:321] INFO     losses　　Epoch0 [1600/2216] Stage 0 = 2.68(6.50)	Stage 1 = 2.39(6.02)	Stage 2 = 2.30(5.85)	Stage 3 = 2.15(5.72)	Stage 4 = 1.96(5.55)
+[2021-01-09 12:29:18 main.py:327] INFO     losses_pix　　Epoch0 [1600/2216] Stage 0 = 0.330(0.500)	Stage 1 = 0.321(0.484)	Stage 2 = 0.319(0.480)	Stage 3 = 0.245(0.421)	Stage 4 = 0.236(0.418)
+[2021-01-09 12:39:09 main.py:321] INFO     losses　　Epoch0 [2000/2216] Stage 0 = 3.63(6.19)	Stage 1 = 3.37(5.72)	Stage 2 = 2.98(5.55)	Stage 3 = 2.83(5.42)	Stage 4 = 2.65(5.23)
+[2021-01-09 12:39:09 main.py:327] INFO     losses_pix　　Epoch0 [2000/2216] Stage 0 = 0.363(0.480)	Stage 1 = 0.358(0.465)	Stage 2 = 0.340(0.461)	Stage 3 = 0.272(0.400)	Stage 4 = 0.269(0.396)
+[2021-01-09 12:44:26 main.py:335] INFO     Average train loss = Stage 0 = 6.04	Stage 1 = 5.58	Stage 2 = 5.40	Stage 3 = 5.27	Stage 4 = 5.08
+[2021-01-09 12:44:26 main.py:338] INFO     Average train thres1 = Stage 0 = 0.472	Stage 1 = 0.457	Stage 2 = 0.452	Stage 3 = 0.391	Stage 4 = 0.388
+[2021-01-09 12:44:28 main.py:444] INFO     EPEs　　[0/4370] Stage 0 = 4.52(4.52)
+[2021-01-09 12:44:28 main.py:447] INFO     thres1　　[0/4370] Stage 0 = 0.346(0.346)
+[2021-01-09 12:46:04 main.py:444] INFO     EPEs　　[400/4370] Stage 0 = 2.75(2.84)
+[2021-01-09 12:46:04 main.py:447] INFO     thres1　　[400/4370] Stage 0 = 0.286(0.218)
+[2021-01-09 12:47:39 main.py:444] INFO     EPEs　　[800/4370] Stage 0 = 1.89(2.82)
+[2021-01-09 12:47:39 main.py:447] INFO     thres1　　[800/4370] Stage 0 = 0.203(0.216)
+[2021-01-09 12:49:15 main.py:444] INFO     EPEs　　[1200/4370] Stage 0 = 2.81(2.68)
+[2021-01-09 12:49:15 main.py:447] INFO     thres1　　[1200/4370] Stage 0 = 0.174(0.209)
+[2021-01-09 12:50:51 main.py:444] INFO     EPEs　　[1600/4370] Stage 0 = 1.65(2.53)
+[2021-01-09 12:50:51 main.py:447] INFO     thres1　　[1600/4370] Stage 0 = 0.187(0.201)
+[2021-01-09 12:52:27 main.py:444] INFO     EPEs　　[2000/4370] Stage 0 = 1.83(2.60)
+[2021-01-09 12:52:27 main.py:447] INFO     thres1　　[2000/4370] Stage 0 = 0.171(0.205)
+[2021-01-09 12:54:03 main.py:444] INFO     EPEs　　[2400/4370] Stage 0 = 0.97(2.51)
+[2021-01-09 12:54:03 main.py:447] INFO     thres1　　[2400/4370] Stage 0 = 0.139(0.201)
+[2021-01-09 12:55:38 main.py:444] INFO     EPEs　　[2800/4370] Stage 0 = 3.04(2.52)
+[2021-01-09 12:55:38 main.py:447] INFO     thres1　　[2800/4370] Stage 0 = 0.194(0.203)
+[2021-01-09 12:57:14 main.py:444] INFO     EPEs　　[3200/4370] Stage 0 = 1.82(2.52)
+[2021-01-09 12:57:14 main.py:447] INFO     thres1　　[3200/4370] Stage 0 = 0.127(0.203)
+[2021-01-09 12:58:50 main.py:444] INFO     EPEs　　[3600/4370] Stage 0 = 1.89(2.46)
+[2021-01-09 12:58:50 main.py:447] INFO     thres1　　[3600/4370] Stage 0 = 0.178(0.201)
+[2021-01-09 13:00:25 main.py:444] INFO     EPEs　　[4000/4370] Stage 0 = 2.47(2.43)
+[2021-01-09 13:00:25 main.py:447] INFO     thres1　　[4000/4370] Stage 0 = 0.214(0.200)
+[2021-01-09 13:01:53 main.py:458] INFO     => Mean inference time for 4370 images: 0.222s
+[2021-01-09 13:01:53 main.py:461] INFO     Average test EPE = Stage 0=2.39
+[2021-01-09 13:01:53 main.py:466] INFO     Average test thres1 = Stage 0=0.198
+[2021-01-09 13:01:53 main.py:227] INFO     This is 1-th epoch
+[2021-01-09 13:01:56 main.py:321] INFO     losses　　Epoch1 [0/2216] Stage 0 = 5.35(5.35)	Stage 1 = 5.70(5.70)	Stage 2 = 5.57(5.57)	Stage 3 = 5.48(5.48)	Stage 4 = 5.16(5.16)
+[2021-01-09 13:01:56 main.py:327] INFO     losses_pix　　Epoch1 [0/2216] Stage 0 = 0.333(0.333)	Stage 1 = 0.316(0.316)	Stage 2 = 0.312(0.312)	Stage 3 = 0.273(0.273)	Stage 4 = 0.265(0.265)
+[2021-01-09 13:11:46 main.py:321] INFO     losses　　Epoch1 [400/2216] Stage 0 = 3.61(4.27)	Stage 1 = 3.24(3.85)	Stage 2 = 3.13(3.69)	Stage 3 = 3.02(3.57)	Stage 4 = 2.80(3.34)
+[2021-01-09 13:11:46 main.py:327] INFO     losses_pix　　Epoch1 [400/2216] Stage 0 = 0.328(0.375)	Stage 1 = 0.318(0.357)	Stage 2 = 0.312(0.348)	Stage 3 = 0.259(0.294)	Stage 4 = 0.255(0.290)
+[2021-01-09 13:21:42 main.py:321] INFO     losses　　Epoch1 [800/2216] Stage 0 = 4.49(4.22)	Stage 1 = 4.09(3.78)	Stage 2 = 3.99(3.61)	Stage 3 = 3.88(3.49)	Stage 4 = 3.54(3.26)
+[2021-01-09 13:21:42 main.py:327] INFO     losses_pix　　Epoch1 [800/2216] Stage 0 = 0.353(0.369)	Stage 1 = 0.327(0.350)	Stage 2 = 0.317(0.340)	Stage 3 = 0.274(0.288)	Stage 4 = 0.265(0.283)
+[2021-01-09 13:31:35 main.py:321] INFO     losses　　Epoch1 [1200/2216] Stage 0 = 5.87(4.19)	Stage 1 = 5.37(3.75)	Stage 2 = 5.27(3.58)	Stage 3 = 5.19(3.47)	Stage 4 = 4.94(3.24)
+[2021-01-09 13:31:35 main.py:327] INFO     losses_pix　　Epoch1 [1200/2216] Stage 0 = 0.343(0.366)	Stage 1 = 0.334(0.347)	Stage 2 = 0.323(0.337)	Stage 3 = 0.283(0.285)	Stage 4 = 0.272(0.280)
+[2021-01-09 13:41:30 main.py:321] INFO     losses　　Epoch1 [1600/2216] Stage 0 = 4.20(4.17)	Stage 1 = 3.64(3.72)	Stage 2 = 3.30(3.56)	Stage 3 = 3.19(3.44)	Stage 4 = 2.91(3.21)
+[2021-01-09 13:41:30 main.py:327] INFO     losses_pix　　Epoch1 [1600/2216] Stage 0 = 0.355(0.364)	Stage 1 = 0.335(0.344)	Stage 2 = 0.326(0.335)	Stage 3 = 0.278(0.283)	Stage 4 = 0.271(0.278)
+[2021-01-09 13:51:22 main.py:321] INFO     losses　　Epoch1 [2000/2216] Stage 0 = 4.18(4.07)	Stage 1 = 3.70(3.63)	Stage 2 = 3.61(3.47)	Stage 3 = 3.47(3.36)	Stage 4 = 3.12(3.13)
+[2021-01-09 13:51:22 main.py:327] INFO     losses_pix　　Epoch1 [2000/2216] Stage 0 = 0.376(0.358)	Stage 1 = 0.350(0.339)	Stage 2 = 0.346(0.330)	Stage 3 = 0.290(0.279)	Stage 4 = 0.280(0.274)
+[2021-01-09 13:56:41 main.py:335] INFO     Average train loss = Stage 0 = 4.05	Stage 1 = 3.60	Stage 2 = 3.44	Stage 3 = 3.33	Stage 4 = 3.11
+[2021-01-09 13:56:41 main.py:338] INFO     Average train thres1 = Stage 0 = 0.356	Stage 1 = 0.337	Stage 2 = 0.327	Stage 3 = 0.277	Stage 4 = 0.272
+[2021-01-09 13:56:42 main.py:227] INFO     This is 2-th epoch
+[2021-01-09 13:56:43 main.py:321] INFO     losses　　Epoch2 [0/2216] Stage 0 = 4.58(4.58)	Stage 1 = 4.01(4.01)	Stage 2 = 3.85(3.85)	Stage 3 = 3.74(3.74)	Stage 4 = 3.48(3.48)
+[2021-01-09 13:56:43 main.py:327] INFO     losses_pix　　Epoch2 [0/2216] Stage 0 = 0.313(0.313)	Stage 1 = 0.301(0.301)	Stage 2 = 0.297(0.297)	Stage 3 = 0.257(0.257)	Stage 4 = 0.247(0.247)
+[2021-01-09 14:06:35 main.py:321] INFO     losses　　Epoch2 [400/2216] Stage 0 = 2.78(3.82)	Stage 1 = 2.53(3.38)	Stage 2 = 2.49(3.24)	Stage 3 = 2.40(3.13)	Stage 4 = 2.22(2.92)
+[2021-01-09 14:06:35 main.py:327] INFO     losses_pix　　Epoch2 [400/2216] Stage 0 = 0.267(0.339)	Stage 1 = 0.259(0.320)	Stage 2 = 0.247(0.312)	Stage 3 = 0.208(0.263)	Stage 4 = 0.204(0.257)
+[2021-01-09 14:16:25 main.py:321] INFO     losses　　Epoch2 [800/2216] Stage 0 = 2.88(3.71)	Stage 1 = 2.56(3.28)	Stage 2 = 2.52(3.13)	Stage 3 = 2.43(3.02)	Stage 4 = 2.23(2.82)
+[2021-01-09 14:16:25 main.py:327] INFO     losses_pix　　Epoch2 [800/2216] Stage 0 = 0.268(0.333)	Stage 1 = 0.247(0.314)	Stage 2 = 0.239(0.305)	Stage 3 = 0.206(0.258)	Stage 4 = 0.198(0.252)
+[2021-01-09 14:26:16 main.py:321] INFO     losses　　Epoch2 [1200/2216] Stage 0 = 2.21(3.53)	Stage 1 = 1.97(3.11)	Stage 2 = 1.93(2.98)	Stage 3 = 1.85(2.87)	Stage 4 = 1.62(2.67)
+[2021-01-09 14:26:16 main.py:327] INFO     losses_pix　　Epoch2 [1200/2216] Stage 0 = 0.263(0.325)	Stage 1 = 0.252(0.306)	Stage 2 = 0.249(0.297)	Stage 3 = 0.207(0.252)	Stage 4 = 0.197(0.246)
+[2021-01-09 14:36:09 main.py:321] INFO     losses　　Epoch2 [1600/2216] Stage 0 = 2.63(3.48)	Stage 1 = 2.26(3.06)	Stage 2 = 2.14(2.93)	Stage 3 = 2.05(2.82)	Stage 4 = 1.94(2.63)
+[2021-01-09 14:36:09 main.py:327] INFO     losses_pix　　Epoch2 [1600/2216] Stage 0 = 0.273(0.321)	Stage 1 = 0.256(0.302)	Stage 2 = 0.244(0.294)	Stage 3 = 0.205(0.249)	Stage 4 = 0.199(0.243)
+[2021-01-09 14:46:00 main.py:321] INFO     losses　　Epoch2 [2000/2216] Stage 0 = 2.60(3.47)	Stage 1 = 2.15(3.05)	Stage 2 = 1.99(2.92)	Stage 3 = 1.91(2.82)	Stage 4 = 1.66(2.62)
+[2021-01-09 14:46:00 main.py:327] INFO     losses_pix　　Epoch2 [2000/2216] Stage 0 = 0.238(0.320)	Stage 1 = 0.221(0.301)	Stage 2 = 0.215(0.294)	Stage 3 = 0.184(0.249)	Stage 4 = 0.179(0.243)
+[2021-01-09 14:51:19 main.py:335] INFO     Average train loss = Stage 0 = 3.44	Stage 1 = 3.03	Stage 2 = 2.90	Stage 3 = 2.80	Stage 4 = 2.61
+[2021-01-09 14:51:19 main.py:338] INFO     Average train thres1 = Stage 0 = 0.318	Stage 1 = 0.300	Stage 2 = 0.292	Stage 3 = 0.248	Stage 4 = 0.242
+[2021-01-09 14:51:19 main.py:227] INFO     This is 3-th epoch
+[2021-01-09 14:51:21 main.py:321] INFO     losses　　Epoch3 [0/2216] Stage 0 = 3.73(3.73)	Stage 1 = 3.44(3.44)	Stage 2 = 3.35(3.35)	Stage 3 = 3.26(3.26)	Stage 4 = 2.99(2.99)
+[2021-01-09 14:51:21 main.py:327] INFO     losses_pix　　Epoch3 [0/2216] Stage 0 = 0.337(0.337)	Stage 1 = 0.314(0.314)	Stage 2 = 0.302(0.302)	Stage 3 = 0.261(0.261)	Stage 4 = 0.252(0.252)
+[2021-01-09 15:01:18 main.py:321] INFO     losses　　Epoch3 [400/2216] Stage 0 = 1.82(3.01)	Stage 1 = 1.51(2.63)	Stage 2 = 1.45(2.52)	Stage 3 = 1.36(2.42)	Stage 4 = 1.23(2.25)
+[2021-01-09 15:01:18 main.py:327] INFO     losses_pix　　Epoch3 [400/2216] Stage 0 = 0.264(0.296)	Stage 1 = 0.249(0.279)	Stage 2 = 0.239(0.272)	Stage 3 = 0.197(0.232)	Stage 4 = 0.189(0.226)
+[2021-01-09 15:11:12 main.py:321] INFO     losses　　Epoch3 [800/2216] Stage 0 = 2.29(3.02)	Stage 1 = 1.79(2.65)	Stage 2 = 1.65(2.54)	Stage 3 = 1.56(2.44)	Stage 4 = 1.44(2.27)
+[2021-01-09 15:11:12 main.py:327] INFO     losses_pix　　Epoch3 [800/2216] Stage 0 = 0.309(0.296)	Stage 1 = 0.295(0.279)	Stage 2 = 0.278(0.272)	Stage 3 = 0.241(0.232)	Stage 4 = 0.240(0.226)
+[2021-01-09 15:21:04 main.py:321] INFO     losses　　Epoch3 [1200/2216] Stage 0 = 2.72(2.99)	Stage 1 = 2.14(2.62)	Stage 2 = 2.00(2.51)	Stage 3 = 1.89(2.42)	Stage 4 = 1.74(2.24)
+[2021-01-09 15:21:04 main.py:327] INFO     losses_pix　　Epoch3 [1200/2216] Stage 0 = 0.276(0.294)	Stage 1 = 0.262(0.277)	Stage 2 = 0.255(0.270)	Stage 3 = 0.213(0.230)	Stage 4 = 0.204(0.224)
+[2021-01-09 15:30:58 main.py:321] INFO     losses　　Epoch3 [1600/2216] Stage 0 = 2.77(2.97)	Stage 1 = 2.45(2.60)	Stage 2 = 2.24(2.49)	Stage 3 = 2.13(2.40)	Stage 4 = 1.98(2.23)
+[2021-01-09 15:30:58 main.py:327] INFO     losses_pix　　Epoch3 [1600/2216] Stage 0 = 0.282(0.292)	Stage 1 = 0.273(0.276)	Stage 2 = 0.265(0.270)	Stage 3 = 0.228(0.230)	Stage 4 = 0.221(0.224)
+[2021-01-09 15:40:50 main.py:321] INFO     losses　　Epoch3 [2000/2216] Stage 0 = 3.24(2.94)	Stage 1 = 2.42(2.58)	Stage 2 = 2.23(2.48)	Stage 3 = 2.14(2.38)	Stage 4 = 2.02(2.21)
+[2021-01-09 15:40:50 main.py:327] INFO     losses_pix　　Epoch3 [2000/2216] Stage 0 = 0.415(0.291)	Stage 1 = 0.396(0.275)	Stage 2 = 0.386(0.269)	Stage 3 = 0.338(0.229)	Stage 4 = 0.337(0.223)
+[2021-01-09 15:46:10 main.py:335] INFO     Average train loss = Stage 0 = 2.92	Stage 1 = 2.56	Stage 2 = 2.46	Stage 3 = 2.36	Stage 4 = 2.20
+[2021-01-09 15:46:10 main.py:338] INFO     Average train thres1 = Stage 0 = 0.290	Stage 1 = 0.274	Stage 2 = 0.268	Stage 3 = 0.228	Stage 4 = 0.222
+[2021-01-09 15:46:10 main.py:227] INFO     This is 4-th epoch
+[2021-01-09 15:46:12 main.py:321] INFO     losses　　Epoch4 [0/2216] Stage 0 = 2.26(2.26)	Stage 1 = 2.03(2.03)	Stage 2 = 1.95(1.95)	Stage 3 = 1.86(1.86)	Stage 4 = 1.70(1.70)
+[2021-01-09 15:46:12 main.py:327] INFO     losses_pix　　Epoch4 [0/2216] Stage 0 = 0.271(0.271)	Stage 1 = 0.250(0.250)	Stage 2 = 0.245(0.245)	Stage 3 = 0.201(0.201)	Stage 4 = 0.193(0.193)
+[2021-01-09 15:56:03 main.py:321] INFO     losses　　Epoch4 [400/2216] Stage 0 = 3.41(2.87)	Stage 1 = 3.02(2.52)	Stage 2 = 2.96(2.43)	Stage 3 = 2.87(2.34)	Stage 4 = 2.66(2.17)
+[2021-01-09 15:56:03 main.py:327] INFO     losses_pix　　Epoch4 [400/2216] Stage 0 = 0.250(0.284)	Stage 1 = 0.231(0.268)	Stage 2 = 0.229(0.264)	Stage 3 = 0.197(0.224)	Stage 4 = 0.190(0.218)
+[2021-01-09 16:05:55 main.py:321] INFO     losses　　Epoch4 [800/2216] Stage 0 = 1.83(2.76)	Stage 1 = 1.69(2.42)	Stage 2 = 1.70(2.33)	Stage 3 = 1.61(2.24)	Stage 4 = 1.46(2.08)
+[2021-01-09 16:05:55 main.py:327] INFO     losses_pix　　Epoch4 [800/2216] Stage 0 = 0.243(0.279)	Stage 1 = 0.228(0.263)	Stage 2 = 0.223(0.259)	Stage 3 = 0.182(0.220)	Stage 4 = 0.179(0.214)
+[2021-01-09 16:15:48 main.py:321] INFO     losses　　Epoch4 [1200/2216] Stage 0 = 2.63(2.74)	Stage 1 = 2.13(2.41)	Stage 2 = 1.93(2.32)	Stage 3 = 1.85(2.23)	Stage 4 = 1.76(2.07)
+[2021-01-09 16:15:48 main.py:327] INFO     losses_pix　　Epoch4 [1200/2216] Stage 0 = 0.365(0.278)	Stage 1 = 0.345(0.263)	Stage 2 = 0.336(0.259)	Stage 3 = 0.289(0.220)	Stage 4 = 0.289(0.214)
+[2021-01-09 16:25:41 main.py:321] INFO     losses　　Epoch4 [1600/2216] Stage 0 = 2.50(2.71)	Stage 1 = 2.23(2.38)	Stage 2 = 2.16(2.29)	Stage 3 = 2.10(2.20)	Stage 4 = 1.95(2.05)
+[2021-01-09 16:25:41 main.py:327] INFO     losses_pix　　Epoch4 [1600/2216] Stage 0 = 0.268(0.276)	Stage 1 = 0.257(0.261)	Stage 2 = 0.253(0.256)	Stage 3 = 0.230(0.218)	Stage 4 = 0.226(0.212)
+[2021-01-09 16:35:34 main.py:321] INFO     losses　　Epoch4 [2000/2216] Stage 0 = 2.02(2.69)	Stage 1 = 1.72(2.36)	Stage 2 = 1.70(2.28)	Stage 3 = 1.60(2.19)	Stage 4 = 1.48(2.03)
+[2021-01-09 16:35:34 main.py:327] INFO     losses_pix　　Epoch4 [2000/2216] Stage 0 = 0.283(0.275)	Stage 1 = 0.259(0.260)	Stage 2 = 0.261(0.256)	Stage 3 = 0.213(0.218)	Stage 4 = 0.210(0.212)
+[2021-01-09 16:40:53 main.py:335] INFO     Average train loss = Stage 0 = 2.67	Stage 1 = 2.34	Stage 2 = 2.26	Stage 3 = 2.17	Stage 4 = 2.02
+[2021-01-09 16:40:53 main.py:338] INFO     Average train thres1 = Stage 0 = 0.274	Stage 1 = 0.259	Stage 2 = 0.255	Stage 3 = 0.217	Stage 4 = 0.211
+[2021-01-09 16:40:53 main.py:227] INFO     This is 5-th epoch
+[2021-01-09 16:40:55 main.py:321] INFO     losses　　Epoch5 [0/2216] Stage 0 = 5.69(5.69)	Stage 1 = 4.64(4.64)	Stage 2 = 4.60(4.60)	Stage 3 = 4.52(4.52)	Stage 4 = 4.42(4.42)
+[2021-01-09 16:40:55 main.py:327] INFO     losses_pix　　Epoch5 [0/2216] Stage 0 = 0.303(0.303)	Stage 1 = 0.279(0.279)	Stage 2 = 0.276(0.276)	Stage 3 = 0.232(0.232)	Stage 4 = 0.231(0.231)
+[2021-01-09 16:50:46 main.py:321] INFO     losses　　Epoch5 [400/2216] Stage 0 = 2.21(2.55)	Stage 1 = 1.97(2.24)	Stage 2 = 1.95(2.16)	Stage 3 = 1.84(2.08)	Stage 4 = 1.72(1.93)
+[2021-01-09 16:50:46 main.py:327] INFO     losses_pix　　Epoch5 [400/2216] Stage 0 = 0.289(0.268)	Stage 1 = 0.284(0.252)	Stage 2 = 0.282(0.248)	Stage 3 = 0.228(0.211)	Stage 4 = 0.223(0.205)
+[2021-01-09 17:00:37 main.py:321] INFO     losses　　Epoch5 [800/2216] Stage 0 = 1.84(2.52)	Stage 1 = 1.70(2.20)	Stage 2 = 1.72(2.13)	Stage 3 = 1.65(2.05)	Stage 4 = 1.47(1.90)
+[2021-01-09 17:00:37 main.py:327] INFO     losses_pix　　Epoch5 [800/2216] Stage 0 = 0.235(0.266)	Stage 1 = 0.227(0.251)	Stage 2 = 0.225(0.247)	Stage 3 = 0.200(0.210)	Stage 4 = 0.194(0.204)
+[2021-01-09 17:10:30 main.py:321] INFO     losses　　Epoch5 [1200/2216] Stage 0 = 1.74(2.52)	Stage 1 = 1.72(2.21)	Stage 2 = 1.70(2.13)	Stage 3 = 1.62(2.05)	Stage 4 = 1.48(1.90)
+[2021-01-09 17:10:30 main.py:327] INFO     losses_pix　　Epoch5 [1200/2216] Stage 0 = 0.231(0.267)	Stage 1 = 0.222(0.251)	Stage 2 = 0.219(0.248)	Stage 3 = 0.179(0.211)	Stage 4 = 0.172(0.205)
+[2021-01-09 17:20:23 main.py:321] INFO     losses　　Epoch5 [1600/2216] Stage 0 = 3.87(2.52)	Stage 1 = 3.50(2.21)	Stage 2 = 3.28(2.13)	Stage 3 = 3.10(2.05)	Stage 4 = 2.97(1.90)
+[2021-01-09 17:20:23 main.py:327] INFO     losses_pix　　Epoch5 [1600/2216] Stage 0 = 0.398(0.266)	Stage 1 = 0.371(0.251)	Stage 2 = 0.365(0.247)	Stage 3 = 0.291(0.210)	Stage 4 = 0.289(0.204)
+[2021-01-09 17:30:13 main.py:321] INFO     losses　　Epoch5 [2000/2216] Stage 0 = 2.71(2.54)	Stage 1 = 2.60(2.22)	Stage 2 = 2.52(2.14)	Stage 3 = 2.43(2.06)	Stage 4 = 2.25(1.91)
+[2021-01-09 17:30:13 main.py:327] INFO     losses_pix　　Epoch5 [2000/2216] Stage 0 = 0.198(0.266)	Stage 1 = 0.186(0.251)	Stage 2 = 0.183(0.248)	Stage 3 = 0.154(0.211)	Stage 4 = 0.145(0.204)
+[2021-01-09 17:35:31 main.py:335] INFO     Average train loss = Stage 0 = 2.52	Stage 1 = 2.21	Stage 2 = 2.13	Stage 3 = 2.05	Stage 4 = 1.90
+[2021-01-09 17:35:31 main.py:338] INFO     Average train thres1 = Stage 0 = 0.265	Stage 1 = 0.251	Stage 2 = 0.247	Stage 3 = 0.210	Stage 4 = 0.204
+[2021-01-09 17:35:31 main.py:227] INFO     This is 6-th epoch
+[2021-01-09 17:35:33 main.py:321] INFO     losses　　Epoch6 [0/2216] Stage 0 = 1.54(1.54)	Stage 1 = 1.33(1.33)	Stage 2 = 1.29(1.29)	Stage 3 = 1.21(1.21)	Stage 4 = 1.10(1.10)
+[2021-01-09 17:35:33 main.py:327] INFO     losses_pix　　Epoch6 [0/2216] Stage 0 = 0.252(0.252)	Stage 1 = 0.237(0.237)	Stage 2 = 0.231(0.231)	Stage 3 = 0.196(0.196)	Stage 4 = 0.188(0.188)
+[2021-01-09 17:45:25 main.py:321] INFO     losses　　Epoch6 [400/2216] Stage 0 = 2.35(2.27)	Stage 1 = 1.85(1.99)	Stage 2 = 1.75(1.92)	Stage 3 = 1.67(1.84)	Stage 4 = 1.54(1.70)
+[2021-01-09 17:45:25 main.py:327] INFO     losses_pix　　Epoch6 [400/2216] Stage 0 = 0.273(0.253)	Stage 1 = 0.254(0.238)	Stage 2 = 0.256(0.234)	Stage 3 = 0.214(0.200)	Stage 4 = 0.210(0.194)
+[2021-01-09 17:55:18 main.py:321] INFO     losses　　Epoch6 [800/2216] Stage 0 = 2.68(2.35)	Stage 1 = 2.37(2.06)	Stage 2 = 2.28(1.98)	Stage 3 = 2.20(1.90)	Stage 4 = 2.04(1.76)
+[2021-01-09 17:55:18 main.py:327] INFO     losses_pix　　Epoch6 [800/2216] Stage 0 = 0.260(0.258)	Stage 1 = 0.253(0.243)	Stage 2 = 0.251(0.240)	Stage 3 = 0.218(0.204)	Stage 4 = 0.212(0.198)
+[2021-01-09 18:05:11 main.py:321] INFO     losses　　Epoch6 [1200/2216] Stage 0 = 1.77(2.35)	Stage 1 = 1.52(2.06)	Stage 2 = 1.51(1.99)	Stage 3 = 1.50(1.91)	Stage 4 = 1.39(1.77)
+[2021-01-09 18:05:11 main.py:327] INFO     losses_pix　　Epoch6 [1200/2216] Stage 0 = 0.244(0.257)	Stage 1 = 0.224(0.242)	Stage 2 = 0.227(0.239)	Stage 3 = 0.211(0.203)	Stage 4 = 0.205(0.197)
+[2021-01-09 18:15:05 main.py:321] INFO     losses　　Epoch6 [1600/2216] Stage 0 = 1.58(2.32)	Stage 1 = 1.31(2.04)	Stage 2 = 1.23(1.97)	Stage 3 = 1.17(1.89)	Stage 4 = 1.11(1.75)
+[2021-01-09 18:15:05 main.py:327] INFO     losses_pix　　Epoch6 [1600/2216] Stage 0 = 0.244(0.255)	Stage 1 = 0.225(0.240)	Stage 2 = 0.216(0.237)	Stage 3 = 0.181(0.202)	Stage 4 = 0.178(0.195)
+[2021-01-09 18:24:58 main.py:321] INFO     losses　　Epoch6 [2000/2216] Stage 0 = 2.01(2.30)	Stage 1 = 1.71(2.02)	Stage 2 = 1.76(1.95)	Stage 3 = 1.69(1.87)	Stage 4 = 1.54(1.73)
+[2021-01-09 18:24:58 main.py:327] INFO     losses_pix　　Epoch6 [2000/2216] Stage 0 = 0.277(0.254)	Stage 1 = 0.253(0.239)	Stage 2 = 0.249(0.235)	Stage 3 = 0.216(0.200)	Stage 4 = 0.213(0.194)
+[2021-01-09 18:30:16 main.py:335] INFO     Average train loss = Stage 0 = 2.30	Stage 1 = 2.02	Stage 2 = 1.95	Stage 3 = 1.87	Stage 4 = 1.73
+[2021-01-09 18:30:16 main.py:338] INFO     Average train thres1 = Stage 0 = 0.253	Stage 1 = 0.238	Stage 2 = 0.235	Stage 3 = 0.200	Stage 4 = 0.194
+[2021-01-09 18:30:17 main.py:227] INFO     This is 7-th epoch
+[2021-01-09 18:30:18 main.py:321] INFO     losses　　Epoch7 [0/2216] Stage 0 = 2.85(2.85)	Stage 1 = 2.38(2.38)	Stage 2 = 2.34(2.34)	Stage 3 = 2.26(2.26)	Stage 4 = 2.07(2.07)
+[2021-01-09 18:30:18 main.py:327] INFO     losses_pix　　Epoch7 [0/2216] Stage 0 = 0.314(0.314)	Stage 1 = 0.304(0.304)	Stage 2 = 0.301(0.301)	Stage 3 = 0.270(0.270)	Stage 4 = 0.264(0.264)
+[2021-01-09 18:40:12 main.py:321] INFO     losses　　Epoch7 [400/2216] Stage 0 = 2.34(2.35)	Stage 1 = 2.12(2.06)	Stage 2 = 2.11(1.99)	Stage 3 = 2.02(1.91)	Stage 4 = 1.88(1.77)
+[2021-01-09 18:40:12 main.py:327] INFO     losses_pix　　Epoch7 [400/2216] Stage 0 = 0.293(0.257)	Stage 1 = 0.278(0.242)	Stage 2 = 0.274(0.240)	Stage 3 = 0.239(0.202)	Stage 4 = 0.234(0.196)
+[2021-01-09 18:50:05 main.py:321] INFO     losses　　Epoch7 [800/2216] Stage 0 = 2.50(2.33)	Stage 1 = 1.88(2.03)	Stage 2 = 1.66(1.96)	Stage 3 = 1.58(1.88)	Stage 4 = 1.40(1.74)
+[2021-01-09 18:50:05 main.py:327] INFO     losses_pix　　Epoch7 [800/2216] Stage 0 = 0.239(0.255)	Stage 1 = 0.214(0.240)	Stage 2 = 0.209(0.237)	Stage 3 = 0.169(0.201)	Stage 4 = 0.161(0.195)
+[2021-01-09 18:59:58 main.py:321] INFO     losses　　Epoch7 [1200/2216] Stage 0 = 2.05(2.34)	Stage 1 = 1.45(2.04)	Stage 2 = 1.38(1.97)	Stage 3 = 1.30(1.89)	Stage 4 = 1.15(1.75)
+[2021-01-09 18:59:58 main.py:327] INFO     losses_pix　　Epoch7 [1200/2216] Stage 0 = 0.231(0.256)	Stage 1 = 0.215(0.241)	Stage 2 = 0.208(0.238)	Stage 3 = 0.181(0.202)	Stage 4 = 0.173(0.196)
+[2021-01-09 19:09:50 main.py:321] INFO     losses　　Epoch7 [1600/2216] Stage 0 = 2.22(2.30)	Stage 1 = 1.98(2.01)	Stage 2 = 1.93(1.94)	Stage 3 = 1.84(1.86)	Stage 4 = 1.66(1.73)
+[2021-01-09 19:09:50 main.py:327] INFO     losses_pix　　Epoch7 [1600/2216] Stage 0 = 0.262(0.253)	Stage 1 = 0.246(0.238)	Stage 2 = 0.242(0.235)	Stage 3 = 0.200(0.200)	Stage 4 = 0.193(0.194)
+[2021-01-09 19:19:45 main.py:321] INFO     losses　　Epoch7 [2000/2216] Stage 0 = 2.64(2.31)	Stage 1 = 2.21(2.03)	Stage 2 = 2.15(1.96)	Stage 3 = 2.07(1.88)	Stage 4 = 2.00(1.74)
+[2021-01-09 19:19:45 main.py:327] INFO     losses_pix　　Epoch7 [2000/2216] Stage 0 = 0.311(0.253)	Stage 1 = 0.308(0.238)	Stage 2 = 0.311(0.235)	Stage 3 = 0.271(0.200)	Stage 4 = 0.266(0.194)
+[2021-01-09 19:25:03 main.py:335] INFO     Average train loss = Stage 0 = 2.29	Stage 1 = 2.00	Stage 2 = 1.94	Stage 3 = 1.86	Stage 4 = 1.72
+[2021-01-09 19:25:03 main.py:338] INFO     Average train thres1 = Stage 0 = 0.251	Stage 1 = 0.236	Stage 2 = 0.234	Stage 3 = 0.198	Stage 4 = 0.192
+[2021-01-09 19:25:03 main.py:227] INFO     This is 8-th epoch
+[2021-01-09 19:25:05 main.py:321] INFO     losses　　Epoch8 [0/2216] Stage 0 = 1.73(1.73)	Stage 1 = 1.43(1.43)	Stage 2 = 1.38(1.38)	Stage 3 = 1.32(1.32)	Stage 4 = 1.20(1.20)
+[2021-01-09 19:25:05 main.py:327] INFO     losses_pix　　Epoch8 [0/2216] Stage 0 = 0.208(0.208)	Stage 1 = 0.198(0.198)	Stage 2 = 0.196(0.196)	Stage 3 = 0.172(0.172)	Stage 4 = 0.165(0.165)
+[2021-01-09 19:34:57 main.py:321] INFO     losses　　Epoch8 [400/2216] Stage 0 = 2.10(2.05)	Stage 1 = 1.80(1.80)	Stage 2 = 1.75(1.74)	Stage 3 = 1.67(1.67)	Stage 4 = 1.55(1.54)
+[2021-01-09 19:34:57 main.py:327] INFO     losses_pix　　Epoch8 [400/2216] Stage 0 = 0.235(0.239)	Stage 1 = 0.225(0.224)	Stage 2 = 0.220(0.221)	Stage 3 = 0.192(0.189)	Stage 4 = 0.186(0.183)
+[2021-01-09 19:44:50 main.py:321] INFO     losses　　Epoch8 [800/2216] Stage 0 = 3.16(2.08)	Stage 1 = 2.93(1.82)	Stage 2 = 2.80(1.76)	Stage 3 = 2.73(1.69)	Stage 4 = 2.49(1.56)
+[2021-01-09 19:44:50 main.py:327] INFO     losses_pix　　Epoch8 [800/2216] Stage 0 = 0.254(0.240)	Stage 1 = 0.236(0.225)	Stage 2 = 0.230(0.222)	Stage 3 = 0.202(0.189)	Stage 4 = 0.193(0.183)
+[2021-01-09 19:54:44 main.py:321] INFO     losses　　Epoch8 [1200/2216] Stage 0 = 1.56(2.13)	Stage 1 = 1.43(1.86)	Stage 2 = 1.43(1.79)	Stage 3 = 1.36(1.72)	Stage 4 = 1.23(1.59)
+[2021-01-09 19:54:44 main.py:327] INFO     losses_pix　　Epoch8 [1200/2216] Stage 0 = 0.209(0.242)	Stage 1 = 0.192(0.227)	Stage 2 = 0.192(0.224)	Stage 3 = 0.155(0.191)	Stage 4 = 0.149(0.185)
+[2021-01-09 20:04:36 main.py:321] INFO     losses　　Epoch8 [1600/2216] Stage 0 = 1.95(2.11)	Stage 1 = 1.83(1.84)	Stage 2 = 1.78(1.78)	Stage 3 = 1.71(1.70)	Stage 4 = 1.59(1.57)
+[2021-01-09 20:04:36 main.py:327] INFO     losses_pix　　Epoch8 [1600/2216] Stage 0 = 0.218(0.241)	Stage 1 = 0.214(0.225)	Stage 2 = 0.211(0.223)	Stage 3 = 0.176(0.189)	Stage 4 = 0.172(0.183)
+[2021-01-09 20:14:29 main.py:321] INFO     losses　　Epoch8 [2000/2216] Stage 0 = 2.24(2.12)	Stage 1 = 2.04(1.85)	Stage 2 = 1.99(1.79)	Stage 3 = 1.93(1.71)	Stage 4 = 1.82(1.58)
+[2021-01-09 20:14:29 main.py:327] INFO     losses_pix　　Epoch8 [2000/2216] Stage 0 = 0.262(0.241)	Stage 1 = 0.242(0.225)	Stage 2 = 0.240(0.223)	Stage 3 = 0.217(0.190)	Stage 4 = 0.212(0.183)
+[2021-01-09 20:19:48 main.py:335] INFO     Average train loss = Stage 0 = 2.12	Stage 1 = 1.86	Stage 2 = 1.79	Stage 3 = 1.72	Stage 4 = 1.59
+[2021-01-09 20:19:48 main.py:338] INFO     Average train thres1 = Stage 0 = 0.241	Stage 1 = 0.226	Stage 2 = 0.223	Stage 3 = 0.190	Stage 4 = 0.184
+[2021-01-09 20:19:48 main.py:227] INFO     This is 9-th epoch
+[2021-01-09 20:19:50 main.py:321] INFO     losses　　Epoch9 [0/2216] Stage 0 = 1.52(1.52)	Stage 1 = 1.30(1.30)	Stage 2 = 1.26(1.26)	Stage 3 = 1.20(1.20)	Stage 4 = 1.06(1.06)
+[2021-01-09 20:19:50 main.py:327] INFO     losses_pix　　Epoch9 [0/2216] Stage 0 = 0.214(0.214)	Stage 1 = 0.200(0.200)	Stage 2 = 0.195(0.195)	Stage 3 = 0.173(0.173)	Stage 4 = 0.166(0.166)
+[2021-01-09 20:29:41 main.py:321] INFO     losses　　Epoch9 [400/2216] Stage 0 = 1.99(2.09)	Stage 1 = 1.68(1.83)	Stage 2 = 1.63(1.76)	Stage 3 = 1.54(1.69)	Stage 4 = 1.39(1.57)
+[2021-01-09 20:29:41 main.py:327] INFO     losses_pix　　Epoch9 [400/2216] Stage 0 = 0.233(0.238)	Stage 1 = 0.219(0.222)	Stage 2 = 0.216(0.220)	Stage 3 = 0.172(0.187)	Stage 4 = 0.164(0.181)
+[2021-01-09 20:39:34 main.py:321] INFO     losses　　Epoch9 [800/2216] Stage 0 = 1.81(2.07)	Stage 1 = 1.70(1.81)	Stage 2 = 1.68(1.75)	Stage 3 = 1.60(1.68)	Stage 4 = 1.44(1.55)
+[2021-01-09 20:39:34 main.py:327] INFO     losses_pix　　Epoch9 [800/2216] Stage 0 = 0.214(0.238)	Stage 1 = 0.207(0.223)	Stage 2 = 0.205(0.221)	Stage 3 = 0.174(0.187)	Stage 4 = 0.166(0.181)
+[2021-01-09 20:49:26 main.py:321] INFO     losses　　Epoch9 [1200/2216] Stage 0 = 2.66(2.06)	Stage 1 = 2.30(1.81)	Stage 2 = 2.23(1.74)	Stage 3 = 2.14(1.67)	Stage 4 = 1.95(1.55)
+[2021-01-09 20:49:26 main.py:327] INFO     losses_pix　　Epoch9 [1200/2216] Stage 0 = 0.292(0.237)	Stage 1 = 0.273(0.223)	Stage 2 = 0.267(0.220)	Stage 3 = 0.231(0.187)	Stage 4 = 0.224(0.181)
+[2021-01-09 20:59:17 main.py:321] INFO     losses　　Epoch9 [1600/2216] Stage 0 = 1.98(2.07)	Stage 1 = 1.76(1.81)	Stage 2 = 1.63(1.75)	Stage 3 = 1.57(1.67)	Stage 4 = 1.40(1.55)
+[2021-01-09 20:59:17 main.py:327] INFO     losses_pix　　Epoch9 [1600/2216] Stage 0 = 0.252(0.238)	Stage 1 = 0.234(0.223)	Stage 2 = 0.230(0.221)	Stage 3 = 0.199(0.187)	Stage 4 = 0.193(0.181)
+[2021-01-09 21:09:07 main.py:321] INFO     losses　　Epoch9 [2000/2216] Stage 0 = 3.77(2.07)	Stage 1 = 3.48(1.81)	Stage 2 = 3.28(1.74)	Stage 3 = 3.21(1.67)	Stage 4 = 3.09(1.55)
+[2021-01-09 21:09:07 main.py:327] INFO     losses_pix　　Epoch9 [2000/2216] Stage 0 = 0.246(0.238)	Stage 1 = 0.232(0.223)	Stage 2 = 0.230(0.220)	Stage 3 = 0.197(0.187)	Stage 4 = 0.192(0.181)
+[2021-01-09 21:14:26 main.py:335] INFO     Average train loss = Stage 0 = 2.06	Stage 1 = 1.80	Stage 2 = 1.74	Stage 3 = 1.66	Stage 4 = 1.54
+[2021-01-09 21:14:26 main.py:338] INFO     Average train thres1 = Stage 0 = 0.237	Stage 1 = 0.222	Stage 2 = 0.219	Stage 3 = 0.187	Stage 4 = 0.181
+[2021-01-09 21:14:26 main.py:227] INFO     This is 10-th epoch
+[2021-01-09 21:14:28 main.py:321] INFO     losses　　Epoch10 [0/2216] Stage 0 = 2.11(2.11)	Stage 1 = 1.79(1.79)	Stage 2 = 1.74(1.74)	Stage 3 = 1.66(1.66)	Stage 4 = 1.53(1.53)
+[2021-01-09 21:14:28 main.py:327] INFO     losses_pix　　Epoch10 [0/2216] Stage 0 = 0.256(0.256)	Stage 1 = 0.240(0.240)	Stage 2 = 0.236(0.236)	Stage 3 = 0.201(0.201)	Stage 4 = 0.196(0.196)
+[2021-01-09 21:24:22 main.py:321] INFO     losses　　Epoch10 [400/2216] Stage 0 = 1.40(2.10)	Stage 1 = 1.23(1.83)	Stage 2 = 1.15(1.75)	Stage 3 = 1.07(1.68)	Stage 4 = 0.95(1.55)
+[2021-01-09 21:24:22 main.py:327] INFO     losses_pix　　Epoch10 [400/2216] Stage 0 = 0.201(0.236)	Stage 1 = 0.182(0.222)	Stage 2 = 0.184(0.219)	Stage 3 = 0.148(0.185)	Stage 4 = 0.142(0.179)
+[2021-01-09 21:34:15 main.py:321] INFO     losses　　Epoch10 [800/2216] Stage 0 = 1.62(2.07)	Stage 1 = 1.33(1.80)	Stage 2 = 1.36(1.73)	Stage 3 = 1.29(1.66)	Stage 4 = 1.16(1.54)
+[2021-01-09 21:34:15 main.py:327] INFO     losses_pix　　Epoch10 [800/2216] Stage 0 = 0.230(0.235)	Stage 1 = 0.203(0.220)	Stage 2 = 0.199(0.218)	Stage 3 = 0.165(0.185)	Stage 4 = 0.161(0.179)
+[2021-01-09 21:44:10 main.py:321] INFO     losses　　Epoch10 [1200/2216] Stage 0 = 2.19(2.03)	Stage 1 = 1.89(1.78)	Stage 2 = 1.84(1.71)	Stage 3 = 1.77(1.64)	Stage 4 = 1.66(1.52)
+[2021-01-09 21:44:10 main.py:327] INFO     losses_pix　　Epoch10 [1200/2216] Stage 0 = 0.279(0.234)	Stage 1 = 0.256(0.219)	Stage 2 = 0.253(0.217)	Stage 3 = 0.219(0.185)	Stage 4 = 0.215(0.178)
+[2021-01-09 21:54:04 main.py:321] INFO     losses　　Epoch10 [1600/2216] Stage 0 = 1.26(2.03)	Stage 1 = 1.17(1.77)	Stage 2 = 1.17(1.71)	Stage 3 = 1.11(1.64)	Stage 4 = 1.03(1.51)
+[2021-01-09 21:54:04 main.py:327] INFO     losses_pix　　Epoch10 [1600/2216] Stage 0 = 0.178(0.234)	Stage 1 = 0.168(0.219)	Stage 2 = 0.166(0.217)	Stage 3 = 0.141(0.185)	Stage 4 = 0.137(0.178)
+[2021-01-09 22:03:59 main.py:321] INFO     losses　　Epoch10 [2000/2216] Stage 0 = 2.04(2.02)	Stage 1 = 1.80(1.76)	Stage 2 = 1.70(1.70)	Stage 3 = 1.62(1.63)	Stage 4 = 1.50(1.50)
+[2021-01-09 22:03:59 main.py:327] INFO     losses_pix　　Epoch10 [2000/2216] Stage 0 = 0.269(0.233)	Stage 1 = 0.246(0.219)	Stage 2 = 0.244(0.216)	Stage 3 = 0.210(0.184)	Stage 4 = 0.202(0.178)
+[2021-01-09 22:09:17 main.py:335] INFO     Average train loss = Stage 0 = 2.03	Stage 1 = 1.77	Stage 2 = 1.71	Stage 3 = 1.64	Stage 4 = 1.52
+[2021-01-09 22:09:17 main.py:338] INFO     Average train thres1 = Stage 0 = 0.234	Stage 1 = 0.220	Stage 2 = 0.217	Stage 3 = 0.185	Stage 4 = 0.179
+[2021-01-09 22:09:18 main.py:444] INFO     EPEs　　[0/4370] Stage 0 = 1.58(1.58)
+[2021-01-09 22:09:18 main.py:447] INFO     thres1　　[0/4370] Stage 0 = 0.184(0.184)
+[2021-01-09 22:10:54 main.py:444] INFO     EPEs　　[400/4370] Stage 0 = 0.90(1.25)
+[2021-01-09 22:10:54 main.py:447] INFO     thres1　　[400/4370] Stage 0 = 0.156(0.125)
+[2021-01-09 22:12:29 main.py:444] INFO     EPEs　　[800/4370] Stage 0 = 0.71(1.27)
+[2021-01-09 22:12:29 main.py:447] INFO     thres1　　[800/4370] Stage 0 = 0.095(0.124)
+[2021-01-09 22:14:04 main.py:444] INFO     EPEs　　[1200/4370] Stage 0 = 0.72(1.19)
+[2021-01-09 22:14:04 main.py:447] INFO     thres1　　[1200/4370] Stage 0 = 0.096(0.119)
+[2021-01-09 22:15:40 main.py:444] INFO     EPEs　　[1600/4370] Stage 0 = 0.69(1.13)
+[2021-01-09 22:15:40 main.py:447] INFO     thres1　　[1600/4370] Stage 0 = 0.093(0.113)
+[2021-01-09 22:17:16 main.py:444] INFO     EPEs　　[2000/4370] Stage 0 = 0.71(1.18)
+[2021-01-09 22:17:16 main.py:447] INFO     thres1　　[2000/4370] Stage 0 = 0.096(0.116)
+[2021-01-09 22:18:52 main.py:444] INFO     EPEs　　[2400/4370] Stage 0 = 0.49(1.12)
+[2021-01-09 22:18:52 main.py:447] INFO     thres1　　[2400/4370] Stage 0 = 0.059(0.112)
+[2021-01-09 22:20:28 main.py:444] INFO     EPEs　　[2800/4370] Stage 0 = 1.06(1.11)
+[2021-01-09 22:20:28 main.py:447] INFO     thres1　　[2800/4370] Stage 0 = 0.117(0.113)
+[2021-01-09 22:22:04 main.py:444] INFO     EPEs　　[3200/4370] Stage 0 = 0.77(1.10)
+[2021-01-09 22:22:04 main.py:447] INFO     thres1　　[3200/4370] Stage 0 = 0.065(0.112)
+[2021-01-09 22:23:40 main.py:444] INFO     EPEs　　[3600/4370] Stage 0 = 0.67(1.07)
+[2021-01-09 22:23:40 main.py:447] INFO     thres1　　[3600/4370] Stage 0 = 0.091(0.110)
+[2021-01-09 22:25:16 main.py:444] INFO     EPEs　　[4000/4370] Stage 0 = 0.92(1.04)
+[2021-01-09 22:25:16 main.py:447] INFO     thres1　　[4000/4370] Stage 0 = 0.103(0.109)
+[2021-01-09 22:26:45 main.py:458] INFO     => Mean inference time for 4370 images: 0.222s
+[2021-01-09 22:26:45 main.py:461] INFO     Average test EPE = Stage 0=1.02
+[2021-01-09 22:26:45 main.py:466] INFO     Average test thres1 = Stage 0=0.106
+[2021-01-09 22:26:45 main.py:227] INFO     This is 11-th epoch
+[2021-01-09 22:26:46 main.py:321] INFO     losses　　Epoch11 [0/2216] Stage 0 = 1.34(1.34)	Stage 1 = 1.21(1.21)	Stage 2 = 1.18(1.18)	Stage 3 = 1.12(1.12)	Stage 4 = 1.00(1.00)
+[2021-01-09 22:26:46 main.py:327] INFO     losses_pix　　Epoch11 [0/2216] Stage 0 = 0.181(0.181)	Stage 1 = 0.171(0.171)	Stage 2 = 0.168(0.168)	Stage 3 = 0.138(0.138)	Stage 4 = 0.131(0.131)
+[2021-01-09 22:36:40 main.py:321] INFO     losses　　Epoch11 [400/2216] Stage 0 = 1.02(1.83)	Stage 1 = 0.87(1.60)	Stage 2 = 0.84(1.54)	Stage 3 = 0.78(1.47)	Stage 4 = 0.68(1.35)
+[2021-01-09 22:36:40 main.py:327] INFO     losses_pix　　Epoch11 [400/2216] Stage 0 = 0.158(0.225)	Stage 1 = 0.143(0.209)	Stage 2 = 0.142(0.206)	Stage 3 = 0.117(0.176)	Stage 4 = 0.111(0.169)
+[2021-01-09 22:46:34 main.py:321] INFO     losses　　Epoch11 [800/2216] Stage 0 = 0.87(1.82)	Stage 1 = 0.79(1.59)	Stage 2 = 0.78(1.53)	Stage 3 = 0.72(1.46)	Stage 4 = 0.63(1.34)
+[2021-01-09 22:46:34 main.py:327] INFO     losses_pix　　Epoch11 [800/2216] Stage 0 = 0.169(0.223)	Stage 1 = 0.149(0.208)	Stage 2 = 0.147(0.205)	Stage 3 = 0.118(0.175)	Stage 4 = 0.111(0.168)
+[2021-01-09 22:56:29 main.py:321] INFO     losses　　Epoch11 [1200/2216] Stage 0 = 1.85(1.82)	Stage 1 = 1.55(1.60)	Stage 2 = 1.47(1.53)	Stage 3 = 1.42(1.47)	Stage 4 = 1.27(1.35)
+[2021-01-09 22:56:29 main.py:327] INFO     losses_pix　　Epoch11 [1200/2216] Stage 0 = 0.232(0.223)	Stage 1 = 0.213(0.208)	Stage 2 = 0.208(0.204)	Stage 3 = 0.183(0.175)	Stage 4 = 0.176(0.168)
+[2021-01-09 23:06:24 main.py:321] INFO     losses　　Epoch11 [1600/2216] Stage 0 = 0.95(1.82)	Stage 1 = 0.81(1.59)	Stage 2 = 0.78(1.53)	Stage 3 = 0.73(1.47)	Stage 4 = 0.66(1.35)
+[2021-01-09 23:06:24 main.py:327] INFO     losses_pix　　Epoch11 [1600/2216] Stage 0 = 0.177(0.223)	Stage 1 = 0.163(0.207)	Stage 2 = 0.163(0.204)	Stage 3 = 0.135(0.175)	Stage 4 = 0.128(0.168)
+[2021-01-09 23:16:18 main.py:321] INFO     losses　　Epoch11 [2000/2216] Stage 0 = 1.87(1.81)	Stage 1 = 1.69(1.59)	Stage 2 = 1.64(1.53)	Stage 3 = 1.57(1.46)	Stage 4 = 1.41(1.34)
+[2021-01-09 23:16:18 main.py:327] INFO     losses_pix　　Epoch11 [2000/2216] Stage 0 = 0.180(0.222)	Stage 1 = 0.168(0.207)	Stage 2 = 0.168(0.204)	Stage 3 = 0.137(0.174)	Stage 4 = 0.130(0.168)
+[2021-01-09 23:21:37 main.py:335] INFO     Average train loss = Stage 0 = 1.81	Stage 1 = 1.58	Stage 2 = 1.52	Stage 3 = 1.46	Stage 4 = 1.34
+[2021-01-09 23:21:37 main.py:338] INFO     Average train thres1 = Stage 0 = 0.222	Stage 1 = 0.207	Stage 2 = 0.203	Stage 3 = 0.174	Stage 4 = 0.168
+[2021-01-09 23:21:38 main.py:227] INFO     This is 12-th epoch
+[2021-01-09 23:21:39 main.py:321] INFO     losses　　Epoch12 [0/2216] Stage 0 = 2.09(2.09)	Stage 1 = 2.02(2.02)	Stage 2 = 1.95(1.95)	Stage 3 = 1.89(1.89)	Stage 4 = 1.79(1.79)
+[2021-01-09 23:21:39 main.py:327] INFO     losses_pix　　Epoch12 [0/2216] Stage 0 = 0.241(0.241)	Stage 1 = 0.228(0.228)	Stage 2 = 0.226(0.226)	Stage 3 = 0.197(0.197)	Stage 4 = 0.192(0.192)
+[2021-01-09 23:31:33 main.py:321] INFO     losses　　Epoch12 [400/2216] Stage 0 = 1.55(1.78)	Stage 1 = 1.31(1.56)	Stage 2 = 1.29(1.50)	Stage 3 = 1.23(1.44)	Stage 4 = 1.13(1.32)
+[2021-01-09 23:31:33 main.py:327] INFO     losses_pix　　Epoch12 [400/2216] Stage 0 = 0.219(0.217)	Stage 1 = 0.209(0.203)	Stage 2 = 0.205(0.200)	Stage 3 = 0.179(0.171)	Stage 4 = 0.172(0.164)
+[2021-01-09 23:41:24 main.py:321] INFO     losses　　Epoch12 [800/2216] Stage 0 = 1.94(1.77)	Stage 1 = 1.85(1.56)	Stage 2 = 1.86(1.50)	Stage 3 = 1.81(1.43)	Stage 4 = 1.63(1.32)
+[2021-01-09 23:41:24 main.py:327] INFO     losses_pix　　Epoch12 [800/2216] Stage 0 = 0.170(0.219)	Stage 1 = 0.158(0.204)	Stage 2 = 0.160(0.201)	Stage 3 = 0.136(0.172)	Stage 4 = 0.128(0.166)
+[2021-01-09 23:51:17 main.py:321] INFO     losses　　Epoch12 [1200/2216] Stage 0 = 1.33(1.78)	Stage 1 = 1.10(1.56)	Stage 2 = 1.07(1.49)	Stage 3 = 1.02(1.43)	Stage 4 = 0.92(1.31)
+[2021-01-09 23:51:17 main.py:327] INFO     losses_pix　　Epoch12 [1200/2216] Stage 0 = 0.206(0.218)	Stage 1 = 0.186(0.203)	Stage 2 = 0.178(0.200)	Stage 3 = 0.152(0.172)	Stage 4 = 0.147(0.165)
+[2021-01-10 00:01:09 main.py:321] INFO     losses　　Epoch12 [1600/2216] Stage 0 = 1.46(1.78)	Stage 1 = 1.24(1.56)	Stage 2 = 1.20(1.49)	Stage 3 = 1.13(1.43)	Stage 4 = 1.07(1.32)
+[2021-01-10 00:01:09 main.py:327] INFO     losses_pix　　Epoch12 [1600/2216] Stage 0 = 0.228(0.218)	Stage 1 = 0.203(0.203)	Stage 2 = 0.193(0.200)	Stage 3 = 0.164(0.172)	Stage 4 = 0.159(0.165)
+[2021-01-10 00:11:01 main.py:321] INFO     losses　　Epoch12 [2000/2216] Stage 0 = 1.51(1.78)	Stage 1 = 1.36(1.56)	Stage 2 = 1.30(1.50)	Stage 3 = 1.23(1.43)	Stage 4 = 1.10(1.32)
+[2021-01-10 00:11:01 main.py:327] INFO     losses_pix　　Epoch12 [2000/2216] Stage 0 = 0.186(0.218)	Stage 1 = 0.173(0.203)	Stage 2 = 0.171(0.200)	Stage 3 = 0.141(0.172)	Stage 4 = 0.134(0.165)
+[2021-01-10 00:16:18 main.py:335] INFO     Average train loss = Stage 0 = 1.77	Stage 1 = 1.55	Stage 2 = 1.49	Stage 3 = 1.43	Stage 4 = 1.31
+[2021-01-10 00:16:18 main.py:338] INFO     Average train thres1 = Stage 0 = 0.218	Stage 1 = 0.203	Stage 2 = 0.200	Stage 3 = 0.172	Stage 4 = 0.165
+[2021-01-10 00:16:18 main.py:227] INFO     This is 13-th epoch
+[2021-01-10 00:16:20 main.py:321] INFO     losses　　Epoch13 [0/2216] Stage 0 = 2.01(2.01)	Stage 1 = 1.83(1.83)	Stage 2 = 1.79(1.79)	Stage 3 = 1.72(1.72)	Stage 4 = 1.60(1.60)
+[2021-01-10 00:16:20 main.py:327] INFO     losses_pix　　Epoch13 [0/2216] Stage 0 = 0.212(0.212)	Stage 1 = 0.199(0.199)	Stage 2 = 0.198(0.198)	Stage 3 = 0.170(0.170)	Stage 4 = 0.163(0.163)
+[2021-01-10 00:26:09 main.py:321] INFO     losses　　Epoch13 [400/2216] Stage 0 = 2.17(1.73)	Stage 1 = 1.98(1.53)	Stage 2 = 1.85(1.47)	Stage 3 = 1.80(1.41)	Stage 4 = 1.68(1.29)
+[2021-01-10 00:26:09 main.py:327] INFO     losses_pix　　Epoch13 [400/2216] Stage 0 = 0.197(0.216)	Stage 1 = 0.186(0.202)	Stage 2 = 0.185(0.199)	Stage 3 = 0.160(0.171)	Stage 4 = 0.154(0.164)
+[2021-01-10 00:35:58 main.py:321] INFO     losses　　Epoch13 [800/2216] Stage 0 = 2.32(1.72)	Stage 1 = 2.03(1.50)	Stage 2 = 1.93(1.44)	Stage 3 = 1.85(1.38)	Stage 4 = 1.75(1.27)
+[2021-01-10 00:35:58 main.py:327] INFO     losses_pix　　Epoch13 [800/2216] Stage 0 = 0.280(0.215)	Stage 1 = 0.250(0.200)	Stage 2 = 0.242(0.197)	Stage 3 = 0.205(0.169)	Stage 4 = 0.201(0.163)
+[2021-01-10 00:45:48 main.py:321] INFO     losses　　Epoch13 [1200/2216] Stage 0 = 1.46(1.72)	Stage 1 = 1.23(1.51)	Stage 2 = 1.16(1.44)	Stage 3 = 1.10(1.38)	Stage 4 = 0.98(1.27)
+[2021-01-10 00:45:48 main.py:327] INFO     losses_pix　　Epoch13 [1200/2216] Stage 0 = 0.188(0.215)	Stage 1 = 0.172(0.200)	Stage 2 = 0.170(0.197)	Stage 3 = 0.138(0.169)	Stage 4 = 0.132(0.162)
+[2021-01-10 00:55:37 main.py:321] INFO     losses　　Epoch13 [1600/2216] Stage 0 = 1.93(1.75)	Stage 1 = 1.82(1.53)	Stage 2 = 1.67(1.47)	Stage 3 = 1.61(1.40)	Stage 4 = 1.50(1.29)
+[2021-01-10 00:55:37 main.py:327] INFO     losses_pix　　Epoch13 [1600/2216] Stage 0 = 0.196(0.217)	Stage 1 = 0.188(0.202)	Stage 2 = 0.185(0.199)	Stage 3 = 0.163(0.170)	Stage 4 = 0.154(0.164)
+[2021-01-10 01:05:25 main.py:321] INFO     losses　　Epoch13 [2000/2216] Stage 0 = 1.84(1.75)	Stage 1 = 1.78(1.53)	Stage 2 = 1.74(1.47)	Stage 3 = 1.68(1.41)	Stage 4 = 1.55(1.29)
+[2021-01-10 01:05:25 main.py:327] INFO     losses_pix　　Epoch13 [2000/2216] Stage 0 = 0.235(0.217)	Stage 1 = 0.226(0.202)	Stage 2 = 0.222(0.199)	Stage 3 = 0.190(0.171)	Stage 4 = 0.182(0.164)
+[2021-01-10 01:10:41 main.py:335] INFO     Average train loss = Stage 0 = 1.75	Stage 1 = 1.53	Stage 2 = 1.47	Stage 3 = 1.41	Stage 4 = 1.29
+[2021-01-10 01:10:41 main.py:338] INFO     Average train thres1 = Stage 0 = 0.218	Stage 1 = 0.202	Stage 2 = 0.199	Stage 3 = 0.171	Stage 4 = 0.165
+[2021-01-10 01:10:41 main.py:227] INFO     This is 14-th epoch
+[2021-01-10 01:10:43 main.py:321] INFO     losses　　Epoch14 [0/2216] Stage 0 = 1.21(1.21)	Stage 1 = 1.12(1.12)	Stage 2 = 1.11(1.11)	Stage 3 = 1.05(1.05)	Stage 4 = 0.95(0.95)
+[2021-01-10 01:10:43 main.py:327] INFO     losses_pix　　Epoch14 [0/2216] Stage 0 = 0.167(0.167)	Stage 1 = 0.160(0.160)	Stage 2 = 0.160(0.160)	Stage 3 = 0.135(0.135)	Stage 4 = 0.129(0.129)
+[2021-01-10 01:20:32 main.py:321] INFO     losses　　Epoch14 [400/2216] Stage 0 = 1.94(1.73)	Stage 1 = 1.77(1.52)	Stage 2 = 1.81(1.45)	Stage 3 = 1.73(1.39)	Stage 4 = 1.59(1.28)
+[2021-01-10 01:20:32 main.py:327] INFO     losses_pix　　Epoch14 [400/2216] Stage 0 = 0.224(0.215)	Stage 1 = 0.211(0.200)	Stage 2 = 0.214(0.197)	Stage 3 = 0.178(0.169)	Stage 4 = 0.170(0.163)
+[2021-01-10 01:30:20 main.py:321] INFO     losses　　Epoch14 [800/2216] Stage 0 = 1.11(1.76)	Stage 1 = 1.00(1.54)	Stage 2 = 0.96(1.48)	Stage 3 = 0.91(1.41)	Stage 4 = 0.80(1.30)
+[2021-01-10 01:30:20 main.py:327] INFO     losses_pix　　Epoch14 [800/2216] Stage 0 = 0.193(0.217)	Stage 1 = 0.174(0.202)	Stage 2 = 0.168(0.199)	Stage 3 = 0.146(0.171)	Stage 4 = 0.140(0.165)
+[2021-01-10 01:40:09 main.py:321] INFO     losses　　Epoch14 [1200/2216] Stage 0 = 1.82(1.75)	Stage 1 = 1.66(1.53)	Stage 2 = 1.63(1.46)	Stage 3 = 1.56(1.40)	Stage 4 = 1.43(1.28)
+[2021-01-10 01:40:09 main.py:327] INFO     losses_pix　　Epoch14 [1200/2216] Stage 0 = 0.238(0.217)	Stage 1 = 0.222(0.201)	Stage 2 = 0.219(0.198)	Stage 3 = 0.187(0.170)	Stage 4 = 0.180(0.164)
+[2021-01-10 01:50:02 main.py:321] INFO     losses　　Epoch14 [1600/2216] Stage 0 = 2.27(1.73)	Stage 1 = 2.08(1.51)	Stage 2 = 2.04(1.45)	Stage 3 = 1.98(1.39)	Stage 4 = 1.83(1.27)
+[2021-01-10 01:50:02 main.py:327] INFO     losses_pix　　Epoch14 [1600/2216] Stage 0 = 0.263(0.216)	Stage 1 = 0.252(0.200)	Stage 2 = 0.251(0.197)	Stage 3 = 0.229(0.170)	Stage 4 = 0.224(0.163)
+[2021-01-10 01:59:54 main.py:321] INFO     losses　　Epoch14 [2000/2216] Stage 0 = 1.46(1.73)	Stage 1 = 1.29(1.51)	Stage 2 = 1.18(1.45)	Stage 3 = 1.13(1.39)	Stage 4 = 1.02(1.27)
+[2021-01-10 01:59:54 main.py:327] INFO     losses_pix　　Epoch14 [2000/2216] Stage 0 = 0.204(0.216)	Stage 1 = 0.185(0.201)	Stage 2 = 0.183(0.198)	Stage 3 = 0.160(0.170)	Stage 4 = 0.152(0.163)
+[2021-01-10 02:05:12 main.py:335] INFO     Average train loss = Stage 0 = 1.73	Stage 1 = 1.51	Stage 2 = 1.45	Stage 3 = 1.39	Stage 4 = 1.28
+[2021-01-10 02:05:12 main.py:338] INFO     Average train thres1 = Stage 0 = 0.216	Stage 1 = 0.201	Stage 2 = 0.198	Stage 3 = 0.170	Stage 4 = 0.164
+[2021-01-10 02:05:12 main.py:227] INFO     This is 15-th epoch
+[2021-01-10 02:05:14 main.py:321] INFO     losses　　Epoch15 [0/2216] Stage 0 = 2.28(2.28)	Stage 1 = 1.91(1.91)	Stage 2 = 1.95(1.95)	Stage 3 = 1.87(1.87)	Stage 4 = 1.78(1.78)
+[2021-01-10 02:05:14 main.py:327] INFO     losses_pix　　Epoch15 [0/2216] Stage 0 = 0.250(0.250)	Stage 1 = 0.230(0.230)	Stage 2 = 0.231(0.231)	Stage 3 = 0.199(0.199)	Stage 4 = 0.195(0.195)
+[2021-01-10 02:15:08 main.py:321] INFO     losses　　Epoch15 [400/2216] Stage 0 = 2.22(1.69)	Stage 1 = 1.48(1.48)	Stage 2 = 1.31(1.41)	Stage 3 = 1.24(1.35)	Stage 4 = 1.13(1.24)
+[2021-01-10 02:15:08 main.py:327] INFO     losses_pix　　Epoch15 [400/2216] Stage 0 = 0.240(0.213)	Stage 1 = 0.219(0.198)	Stage 2 = 0.214(0.195)	Stage 3 = 0.178(0.167)	Stage 4 = 0.169(0.161)
+[2021-01-10 02:24:58 main.py:321] INFO     losses　　Epoch15 [800/2216] Stage 0 = 3.91(1.70)	Stage 1 = 3.03(1.48)	Stage 2 = 2.74(1.42)	Stage 3 = 2.68(1.36)	Stage 4 = 2.58(1.25)
+[2021-01-10 02:24:58 main.py:327] INFO     losses_pix　　Epoch15 [800/2216] Stage 0 = 0.334(0.213)	Stage 1 = 0.312(0.198)	Stage 2 = 0.301(0.195)	Stage 3 = 0.273(0.168)	Stage 4 = 0.271(0.161)
+[2021-01-10 02:34:50 main.py:321] INFO     losses　　Epoch15 [1200/2216] Stage 0 = 1.62(1.70)	Stage 1 = 1.52(1.48)	Stage 2 = 1.52(1.42)	Stage 3 = 1.45(1.36)	Stage 4 = 1.33(1.25)
+[2021-01-10 02:34:50 main.py:327] INFO     losses_pix　　Epoch15 [1200/2216] Stage 0 = 0.179(0.214)	Stage 1 = 0.166(0.198)	Stage 2 = 0.164(0.196)	Stage 3 = 0.139(0.168)	Stage 4 = 0.132(0.161)
+[2021-01-10 02:44:44 main.py:321] INFO     losses　　Epoch15 [1600/2216] Stage 0 = 1.46(1.70)	Stage 1 = 1.26(1.48)	Stage 2 = 1.22(1.42)	Stage 3 = 1.16(1.36)	Stage 4 = 1.05(1.25)
+[2021-01-10 02:44:44 main.py:327] INFO     losses_pix　　Epoch15 [1600/2216] Stage 0 = 0.210(0.214)	Stage 1 = 0.173(0.198)	Stage 2 = 0.170(0.195)	Stage 3 = 0.139(0.168)	Stage 4 = 0.136(0.161)
+[2021-01-10 02:54:37 main.py:321] INFO     losses　　Epoch15 [2000/2216] Stage 0 = 1.76(1.70)	Stage 1 = 1.55(1.48)	Stage 2 = 1.50(1.42)	Stage 3 = 1.44(1.36)	Stage 4 = 1.30(1.25)
+[2021-01-10 02:54:37 main.py:327] INFO     losses_pix　　Epoch15 [2000/2216] Stage 0 = 0.174(0.214)	Stage 1 = 0.164(0.198)	Stage 2 = 0.163(0.195)	Stage 3 = 0.136(0.168)	Stage 4 = 0.129(0.161)
+[2021-01-10 02:59:55 main.py:335] INFO     Average train loss = Stage 0 = 1.70	Stage 1 = 1.49	Stage 2 = 1.42	Stage 3 = 1.36	Stage 4 = 1.25
+[2021-01-10 02:59:55 main.py:338] INFO     Average train thres1 = Stage 0 = 0.214	Stage 1 = 0.199	Stage 2 = 0.196	Stage 3 = 0.168	Stage 4 = 0.161
+[2021-01-10 02:59:55 main.py:227] INFO     This is 16-th epoch
+[2021-01-10 02:59:57 main.py:321] INFO     losses　　Epoch16 [0/2216] Stage 0 = 2.00(2.00)	Stage 1 = 1.65(1.65)	Stage 2 = 1.57(1.57)	Stage 3 = 1.50(1.50)	Stage 4 = 1.40(1.40)
+[2021-01-10 02:59:57 main.py:327] INFO     losses_pix　　Epoch16 [0/2216] Stage 0 = 0.285(0.285)	Stage 1 = 0.265(0.265)	Stage 2 = 0.262(0.262)	Stage 3 = 0.230(0.230)	Stage 4 = 0.225(0.225)
+[2021-01-10 03:09:49 main.py:321] INFO     losses　　Epoch16 [400/2216] Stage 0 = 2.02(1.65)	Stage 1 = 1.82(1.44)	Stage 2 = 1.82(1.38)	Stage 3 = 1.75(1.32)	Stage 4 = 1.67(1.21)
+[2021-01-10 03:09:49 main.py:327] INFO     losses_pix　　Epoch16 [400/2216] Stage 0 = 0.234(0.213)	Stage 1 = 0.224(0.197)	Stage 2 = 0.221(0.194)	Stage 3 = 0.195(0.167)	Stage 4 = 0.189(0.161)
+[2021-01-10 03:19:42 main.py:321] INFO     losses　　Epoch16 [800/2216] Stage 0 = 1.75(1.69)	Stage 1 = 1.68(1.47)	Stage 2 = 1.60(1.41)	Stage 3 = 1.52(1.35)	Stage 4 = 1.40(1.24)
+[2021-01-10 03:19:42 main.py:327] INFO     losses_pix　　Epoch16 [800/2216] Stage 0 = 0.238(0.214)	Stage 1 = 0.216(0.198)	Stage 2 = 0.212(0.196)	Stage 3 = 0.176(0.168)	Stage 4 = 0.167(0.161)
+[2021-01-10 03:29:34 main.py:321] INFO     losses　　Epoch16 [1200/2216] Stage 0 = 1.05(1.67)	Stage 1 = 0.94(1.46)	Stage 2 = 0.92(1.40)	Stage 3 = 0.84(1.34)	Stage 4 = 0.78(1.23)
+[2021-01-10 03:29:34 main.py:327] INFO     losses_pix　　Epoch16 [1200/2216] Stage 0 = 0.182(0.212)	Stage 1 = 0.168(0.197)	Stage 2 = 0.167(0.195)	Stage 3 = 0.138(0.167)	Stage 4 = 0.133(0.160)
+[2021-01-10 03:39:27 main.py:321] INFO     losses　　Epoch16 [1600/2216] Stage 0 = 1.89(1.68)	Stage 1 = 1.67(1.47)	Stage 2 = 1.56(1.41)	Stage 3 = 1.49(1.35)	Stage 4 = 1.39(1.24)
+[2021-01-10 03:39:27 main.py:327] INFO     losses_pix　　Epoch16 [1600/2216] Stage 0 = 0.242(0.212)	Stage 1 = 0.225(0.197)	Stage 2 = 0.223(0.194)	Stage 3 = 0.190(0.167)	Stage 4 = 0.182(0.160)
+[2021-01-10 03:49:19 main.py:321] INFO     losses　　Epoch16 [2000/2216] Stage 0 = 1.42(1.68)	Stage 1 = 1.25(1.47)	Stage 2 = 1.25(1.41)	Stage 3 = 1.20(1.35)	Stage 4 = 1.10(1.24)
+[2021-01-10 03:49:19 main.py:327] INFO     losses_pix　　Epoch16 [2000/2216] Stage 0 = 0.232(0.212)	Stage 1 = 0.213(0.197)	Stage 2 = 0.211(0.194)	Stage 3 = 0.179(0.167)	Stage 4 = 0.172(0.160)
+[2021-01-10 03:54:36 main.py:335] INFO     Average train loss = Stage 0 = 1.69	Stage 1 = 1.47	Stage 2 = 1.41	Stage 3 = 1.35	Stage 4 = 1.24
+[2021-01-10 03:54:36 main.py:338] INFO     Average train thres1 = Stage 0 = 0.212	Stage 1 = 0.198	Stage 2 = 0.195	Stage 3 = 0.167	Stage 4 = 0.160
+[2021-01-10 03:54:37 main.py:227] INFO     This is 17-th epoch
+[2021-01-10 03:54:39 main.py:321] INFO     losses　　Epoch17 [0/2216] Stage 0 = 1.48(1.48)	Stage 1 = 1.33(1.33)	Stage 2 = 1.31(1.31)	Stage 3 = 1.25(1.25)	Stage 4 = 1.13(1.13)
+[2021-01-10 03:54:39 main.py:327] INFO     losses_pix　　Epoch17 [0/2216] Stage 0 = 0.207(0.207)	Stage 1 = 0.188(0.188)	Stage 2 = 0.185(0.185)	Stage 3 = 0.153(0.153)	Stage 4 = 0.146(0.146)
+[2021-01-10 04:04:33 main.py:321] INFO     losses　　Epoch17 [400/2216] Stage 0 = 1.87(1.61)	Stage 1 = 1.61(1.41)	Stage 2 = 1.57(1.36)	Stage 3 = 1.51(1.30)	Stage 4 = 1.30(1.19)
+[2021-01-10 04:04:33 main.py:327] INFO     losses_pix　　Epoch17 [400/2216] Stage 0 = 0.203(0.209)	Stage 1 = 0.193(0.194)	Stage 2 = 0.192(0.191)	Stage 3 = 0.166(0.164)	Stage 4 = 0.156(0.157)
+[2021-01-10 04:14:27 main.py:321] INFO     losses　　Epoch17 [800/2216] Stage 0 = 2.13(1.62)	Stage 1 = 1.86(1.42)	Stage 2 = 1.74(1.36)	Stage 3 = 1.68(1.30)	Stage 4 = 1.57(1.19)
+[2021-01-10 04:14:27 main.py:327] INFO     losses_pix　　Epoch17 [800/2216] Stage 0 = 0.245(0.208)	Stage 1 = 0.235(0.193)	Stage 2 = 0.232(0.191)	Stage 3 = 0.202(0.164)	Stage 4 = 0.196(0.157)
+[2021-01-10 04:24:22 main.py:321] INFO     losses　　Epoch17 [1200/2216] Stage 0 = 1.00(1.64)	Stage 1 = 0.88(1.43)	Stage 2 = 0.84(1.37)	Stage 3 = 0.79(1.32)	Stage 4 = 0.68(1.20)
+[2021-01-10 04:24:22 main.py:327] INFO     losses_pix　　Epoch17 [1200/2216] Stage 0 = 0.185(0.210)	Stage 1 = 0.172(0.195)	Stage 2 = 0.167(0.192)	Stage 3 = 0.139(0.165)	Stage 4 = 0.131(0.158)
+[2021-01-10 04:34:16 main.py:321] INFO     losses　　Epoch17 [1600/2216] Stage 0 = 1.44(1.64)	Stage 1 = 1.31(1.44)	Stage 2 = 1.29(1.38)	Stage 3 = 1.22(1.32)	Stage 4 = 1.10(1.21)
+[2021-01-10 04:34:16 main.py:327] INFO     losses_pix　　Epoch17 [1600/2216] Stage 0 = 0.199(0.210)	Stage 1 = 0.186(0.195)	Stage 2 = 0.186(0.192)	Stage 3 = 0.152(0.165)	Stage 4 = 0.142(0.158)
+[2021-01-10 04:44:08 main.py:321] INFO     losses　　Epoch17 [2000/2216] Stage 0 = 1.69(1.64)	Stage 1 = 1.57(1.43)	Stage 2 = 1.58(1.37)	Stage 3 = 1.53(1.32)	Stage 4 = 1.42(1.21)
+[2021-01-10 04:44:08 main.py:327] INFO     losses_pix　　Epoch17 [2000/2216] Stage 0 = 0.189(0.210)	Stage 1 = 0.170(0.195)	Stage 2 = 0.174(0.192)	Stage 3 = 0.147(0.165)	Stage 4 = 0.140(0.158)
+[2021-01-10 04:49:27 main.py:335] INFO     Average train loss = Stage 0 = 1.64	Stage 1 = 1.44	Stage 2 = 1.38	Stage 3 = 1.32	Stage 4 = 1.21
+[2021-01-10 04:49:27 main.py:338] INFO     Average train thres1 = Stage 0 = 0.210	Stage 1 = 0.195	Stage 2 = 0.192	Stage 3 = 0.165	Stage 4 = 0.158
+[2021-01-10 04:49:27 main.py:227] INFO     This is 18-th epoch
+[2021-01-10 04:49:29 main.py:321] INFO     losses　　Epoch18 [0/2216] Stage 0 = 1.51(1.51)	Stage 1 = 1.51(1.51)	Stage 2 = 1.49(1.49)	Stage 3 = 1.43(1.43)	Stage 4 = 1.30(1.30)
+[2021-01-10 04:49:29 main.py:327] INFO     losses_pix　　Epoch18 [0/2216] Stage 0 = 0.169(0.169)	Stage 1 = 0.160(0.160)	Stage 2 = 0.158(0.158)	Stage 3 = 0.131(0.131)	Stage 4 = 0.123(0.123)
+[2021-01-10 04:59:23 main.py:321] INFO     losses　　Epoch18 [400/2216] Stage 0 = 0.96(1.68)	Stage 1 = 0.84(1.46)	Stage 2 = 0.82(1.40)	Stage 3 = 0.78(1.34)	Stage 4 = 0.70(1.23)
+[2021-01-10 04:59:23 main.py:327] INFO     losses_pix　　Epoch18 [400/2216] Stage 0 = 0.172(0.213)	Stage 1 = 0.158(0.197)	Stage 2 = 0.159(0.194)	Stage 3 = 0.141(0.167)	Stage 4 = 0.135(0.160)
+[2021-01-10 05:09:19 main.py:321] INFO     losses　　Epoch18 [800/2216] Stage 0 = 1.80(1.65)	Stage 1 = 1.62(1.45)	Stage 2 = 1.53(1.38)	Stage 3 = 1.46(1.33)	Stage 4 = 1.37(1.21)
+[2021-01-10 05:09:19 main.py:327] INFO     losses_pix　　Epoch18 [800/2216] Stage 0 = 0.216(0.212)	Stage 1 = 0.199(0.197)	Stage 2 = 0.193(0.194)	Stage 3 = 0.158(0.166)	Stage 4 = 0.153(0.160)
+[2021-01-10 05:19:12 main.py:321] INFO     losses　　Epoch18 [1200/2216] Stage 0 = 1.48(1.64)	Stage 1 = 1.44(1.44)	Stage 2 = 1.41(1.38)	Stage 3 = 1.34(1.32)	Stage 4 = 1.23(1.21)
+[2021-01-10 05:19:12 main.py:327] INFO     losses_pix　　Epoch18 [1200/2216] Stage 0 = 0.221(0.212)	Stage 1 = 0.216(0.196)	Stage 2 = 0.215(0.193)	Stage 3 = 0.187(0.166)	Stage 4 = 0.179(0.159)
+[2021-01-10 05:29:03 main.py:321] INFO     losses　　Epoch18 [1600/2216] Stage 0 = 1.04(1.66)	Stage 1 = 0.96(1.45)	Stage 2 = 0.93(1.39)	Stage 3 = 0.87(1.33)	Stage 4 = 0.77(1.22)
+[2021-01-10 05:29:03 main.py:327] INFO     losses_pix　　Epoch18 [1600/2216] Stage 0 = 0.161(0.212)	Stage 1 = 0.151(0.197)	Stage 2 = 0.149(0.194)	Stage 3 = 0.125(0.166)	Stage 4 = 0.115(0.160)
+[2021-01-10 05:38:55 main.py:321] INFO     losses　　Epoch18 [2000/2216] Stage 0 = 1.09(1.66)	Stage 1 = 1.00(1.45)	Stage 2 = 0.96(1.39)	Stage 3 = 0.90(1.33)	Stage 4 = 0.81(1.22)
+[2021-01-10 05:38:55 main.py:327] INFO     losses_pix　　Epoch18 [2000/2216] Stage 0 = 0.173(0.212)	Stage 1 = 0.164(0.197)	Stage 2 = 0.162(0.194)	Stage 3 = 0.136(0.166)	Stage 4 = 0.129(0.159)
+[2021-01-10 05:44:12 main.py:335] INFO     Average train loss = Stage 0 = 1.65	Stage 1 = 1.44	Stage 2 = 1.38	Stage 3 = 1.32	Stage 4 = 1.21
+[2021-01-10 05:44:12 main.py:338] INFO     Average train thres1 = Stage 0 = 0.211	Stage 1 = 0.196	Stage 2 = 0.193	Stage 3 = 0.166	Stage 4 = 0.159
+[2021-01-10 05:44:13 main.py:227] INFO     This is 19-th epoch
+[2021-01-10 05:44:14 main.py:321] INFO     losses　　Epoch19 [0/2216] Stage 0 = 1.34(1.34)	Stage 1 = 1.24(1.24)	Stage 2 = 1.20(1.20)	Stage 3 = 1.13(1.13)	Stage 4 = 0.99(0.99)
+[2021-01-10 05:44:14 main.py:327] INFO     losses_pix　　Epoch19 [0/2216] Stage 0 = 0.209(0.209)	Stage 1 = 0.194(0.194)	Stage 2 = 0.191(0.191)	Stage 3 = 0.157(0.157)	Stage 4 = 0.149(0.149)
+[2021-01-10 05:54:06 main.py:321] INFO     losses　　Epoch19 [400/2216] Stage 0 = 1.35(1.64)	Stage 1 = 1.15(1.42)	Stage 2 = 1.12(1.35)	Stage 3 = 1.07(1.30)	Stage 4 = 0.98(1.19)
+[2021-01-10 05:54:06 main.py:327] INFO     losses_pix　　Epoch19 [400/2216] Stage 0 = 0.202(0.211)	Stage 1 = 0.188(0.195)	Stage 2 = 0.187(0.192)	Stage 3 = 0.160(0.165)	Stage 4 = 0.154(0.158)
+[2021-01-10 06:03:59 main.py:321] INFO     losses　　Epoch19 [800/2216] Stage 0 = 1.67(1.66)	Stage 1 = 1.43(1.43)	Stage 2 = 1.39(1.37)	Stage 3 = 1.32(1.31)	Stage 4 = 1.23(1.20)
+[2021-01-10 06:03:59 main.py:327] INFO     losses_pix　　Epoch19 [800/2216] Stage 0 = 0.214(0.210)	Stage 1 = 0.194(0.195)	Stage 2 = 0.189(0.191)	Stage 3 = 0.162(0.165)	Stage 4 = 0.158(0.158)
+[2021-01-10 06:13:51 main.py:321] INFO     losses　　Epoch19 [1200/2216] Stage 0 = 1.43(1.66)	Stage 1 = 1.22(1.44)	Stage 2 = 1.18(1.37)	Stage 3 = 1.12(1.32)	Stage 4 = 1.01(1.21)
+[2021-01-10 06:13:51 main.py:327] INFO     losses_pix　　Epoch19 [1200/2216] Stage 0 = 0.207(0.211)	Stage 1 = 0.186(0.195)	Stage 2 = 0.184(0.192)	Stage 3 = 0.156(0.165)	Stage 4 = 0.148(0.159)
+[2021-01-10 06:23:44 main.py:321] INFO     losses　　Epoch19 [1600/2216] Stage 0 = 2.52(1.66)	Stage 1 = 2.11(1.44)	Stage 2 = 1.91(1.38)	Stage 3 = 1.85(1.32)	Stage 4 = 1.71(1.21)
+[2021-01-10 06:23:44 main.py:327] INFO     losses_pix　　Epoch19 [1600/2216] Stage 0 = 0.208(0.211)	Stage 1 = 0.194(0.195)	Stage 2 = 0.189(0.192)	Stage 3 = 0.168(0.165)	Stage 4 = 0.163(0.159)
+[2021-01-10 06:33:38 main.py:321] INFO     losses　　Epoch19 [2000/2216] Stage 0 = 0.94(1.64)	Stage 1 = 0.79(1.43)	Stage 2 = 0.82(1.36)	Stage 3 = 0.79(1.31)	Stage 4 = 0.72(1.20)
+[2021-01-10 06:33:38 main.py:327] INFO     losses_pix　　Epoch19 [2000/2216] Stage 0 = 0.141(0.210)	Stage 1 = 0.129(0.195)	Stage 2 = 0.128(0.191)	Stage 3 = 0.110(0.164)	Stage 4 = 0.105(0.158)
+[2021-01-10 06:38:57 main.py:335] INFO     Average train loss = Stage 0 = 1.64	Stage 1 = 1.42	Stage 2 = 1.36	Stage 3 = 1.30	Stage 4 = 1.19
+[2021-01-10 06:38:57 main.py:338] INFO     Average train thres1 = Stage 0 = 0.210	Stage 1 = 0.194	Stage 2 = 0.191	Stage 3 = 0.164	Stage 4 = 0.157
+[2021-01-10 06:38:58 main.py:227] INFO     This is 20-th epoch
+[2021-01-10 06:39:00 main.py:321] INFO     losses　　Epoch20 [0/2216] Stage 0 = 2.18(2.18)	Stage 1 = 1.82(1.82)	Stage 2 = 1.69(1.69)	Stage 3 = 1.63(1.63)	Stage 4 = 1.53(1.53)
+[2021-01-10 06:39:00 main.py:327] INFO     losses_pix　　Epoch20 [0/2216] Stage 0 = 0.273(0.273)	Stage 1 = 0.246(0.246)	Stage 2 = 0.234(0.234)	Stage 3 = 0.204(0.204)	Stage 4 = 0.199(0.199)
+[2021-01-10 06:48:53 main.py:321] INFO     losses　　Epoch20 [400/2216] Stage 0 = 1.29(1.57)	Stage 1 = 1.08(1.37)	Stage 2 = 1.02(1.32)	Stage 3 = 0.97(1.26)	Stage 4 = 0.83(1.15)
+[2021-01-10 06:48:53 main.py:327] INFO     losses_pix　　Epoch20 [400/2216] Stage 0 = 0.181(0.205)	Stage 1 = 0.172(0.190)	Stage 2 = 0.172(0.187)	Stage 3 = 0.149(0.160)	Stage 4 = 0.142(0.154)
+[2021-01-10 06:58:46 main.py:321] INFO     losses　　Epoch20 [800/2216] Stage 0 = 1.85(1.60)	Stage 1 = 1.66(1.40)	Stage 2 = 1.58(1.33)	Stage 3 = 1.51(1.28)	Stage 4 = 1.33(1.16)
+[2021-01-10 06:58:46 main.py:327] INFO     losses_pix　　Epoch20 [800/2216] Stage 0 = 0.229(0.207)	Stage 1 = 0.214(0.192)	Stage 2 = 0.210(0.189)	Stage 3 = 0.179(0.162)	Stage 4 = 0.169(0.156)
+[2021-01-10 07:08:39 main.py:321] INFO     losses　　Epoch20 [1200/2216] Stage 0 = 1.68(1.61)	Stage 1 = 1.55(1.40)	Stage 2 = 1.47(1.34)	Stage 3 = 1.41(1.28)	Stage 4 = 1.31(1.17)
+[2021-01-10 07:08:39 main.py:327] INFO     losses_pix　　Epoch20 [1200/2216] Stage 0 = 0.177(0.208)	Stage 1 = 0.172(0.193)	Stage 2 = 0.172(0.190)	Stage 3 = 0.144(0.163)	Stage 4 = 0.137(0.156)
+[2021-01-10 07:18:32 main.py:321] INFO     losses　　Epoch20 [1600/2216] Stage 0 = 1.49(1.66)	Stage 1 = 1.40(1.44)	Stage 2 = 1.38(1.38)	Stage 3 = 1.30(1.32)	Stage 4 = 1.18(1.21)
+[2021-01-10 07:18:32 main.py:327] INFO     losses_pix　　Epoch20 [1600/2216] Stage 0 = 0.209(0.211)	Stage 1 = 0.201(0.196)	Stage 2 = 0.198(0.193)	Stage 3 = 0.167(0.165)	Stage 4 = 0.160(0.159)
+[2021-01-10 07:28:26 main.py:321] INFO     losses　　Epoch20 [2000/2216] Stage 0 = 1.41(1.64)	Stage 1 = 1.31(1.43)	Stage 2 = 1.30(1.36)	Stage 3 = 1.22(1.30)	Stage 4 = 1.13(1.19)
+[2021-01-10 07:28:26 main.py:327] INFO     losses_pix　　Epoch20 [2000/2216] Stage 0 = 0.229(0.210)	Stage 1 = 0.219(0.195)	Stage 2 = 0.217(0.192)	Stage 3 = 0.180(0.165)	Stage 4 = 0.174(0.158)
+[2021-01-10 07:33:47 main.py:335] INFO     Average train loss = Stage 0 = 1.63	Stage 1 = 1.42	Stage 2 = 1.36	Stage 3 = 1.30	Stage 4 = 1.19
+[2021-01-10 07:33:47 main.py:338] INFO     Average train thres1 = Stage 0 = 0.210	Stage 1 = 0.195	Stage 2 = 0.192	Stage 3 = 0.164	Stage 4 = 0.158
+[2021-01-10 07:33:48 main.py:444] INFO     EPEs　　[0/4370] Stage 0 = 1.18(1.18)
+[2021-01-10 07:33:48 main.py:447] INFO     thres1　　[0/4370] Stage 0 = 0.131(0.131)
+[2021-01-10 07:35:24 main.py:444] INFO     EPEs　　[400/4370] Stage 0 = 0.71(1.02)
+[2021-01-10 07:35:24 main.py:447] INFO     thres1　　[400/4370] Stage 0 = 0.125(0.110)
+[2021-01-10 07:36:59 main.py:444] INFO     EPEs　　[800/4370] Stage 0 = 0.58(1.03)
+[2021-01-10 07:36:59 main.py:447] INFO     thres1　　[800/4370] Stage 0 = 0.084(0.110)
+[2021-01-10 07:38:35 main.py:444] INFO     EPEs　　[1200/4370] Stage 0 = 0.63(0.97)
+[2021-01-10 07:38:35 main.py:447] INFO     thres1　　[1200/4370] Stage 0 = 0.086(0.105)
+[2021-01-10 07:40:11 main.py:444] INFO     EPEs　　[1600/4370] Stage 0 = 0.61(0.92)
+[2021-01-10 07:40:11 main.py:447] INFO     thres1　　[1600/4370] Stage 0 = 0.083(0.100)
+[2021-01-10 07:41:46 main.py:444] INFO     EPEs　　[2000/4370] Stage 0 = 0.63(0.96)
+[2021-01-10 07:41:46 main.py:447] INFO     thres1　　[2000/4370] Stage 0 = 0.087(0.103)
+[2021-01-10 07:43:22 main.py:444] INFO     EPEs　　[2400/4370] Stage 0 = 0.42(0.91)
+[2021-01-10 07:43:22 main.py:447] INFO     thres1　　[2400/4370] Stage 0 = 0.046(0.099)
+[2021-01-10 07:44:57 main.py:444] INFO     EPEs　　[2800/4370] Stage 0 = 1.05(0.90)
+[2021-01-10 07:44:57 main.py:447] INFO     thres1　　[2800/4370] Stage 0 = 0.099(0.100)
+[2021-01-10 07:46:33 main.py:444] INFO     EPEs　　[3200/4370] Stage 0 = 0.57(0.91)
+[2021-01-10 07:46:33 main.py:447] INFO     thres1　　[3200/4370] Stage 0 = 0.053(0.099)
+[2021-01-10 07:48:09 main.py:444] INFO     EPEs　　[3600/4370] Stage 0 = 0.57(0.89)
+[2021-01-10 07:48:09 main.py:447] INFO     thres1　　[3600/4370] Stage 0 = 0.086(0.097)
+[2021-01-10 07:49:45 main.py:444] INFO     EPEs　　[4000/4370] Stage 0 = 0.78(0.86)
+[2021-01-10 07:49:45 main.py:447] INFO     thres1　　[4000/4370] Stage 0 = 0.094(0.095)
+[2021-01-10 07:51:13 main.py:458] INFO     => Mean inference time for 4370 images: 0.222s
+[2021-01-10 07:51:13 main.py:461] INFO     Average test EPE = Stage 0=0.84
+[2021-01-10 07:51:13 main.py:466] INFO     Average test thres1 = Stage 0=0.093
+[2021-01-10 07:51:13 main.py:227] INFO     This is 21-th epoch
+[2021-01-10 07:51:15 main.py:321] INFO     losses　　Epoch21 [0/2216] Stage 0 = 1.48(1.48)	Stage 1 = 1.30(1.30)	Stage 2 = 1.29(1.29)	Stage 3 = 1.24(1.24)	Stage 4 = 1.17(1.17)
+[2021-01-10 07:51:15 main.py:327] INFO     losses_pix　　Epoch21 [0/2216] Stage 0 = 0.183(0.183)	Stage 1 = 0.169(0.169)	Stage 2 = 0.167(0.167)	Stage 3 = 0.146(0.146)	Stage 4 = 0.139(0.139)
+[2021-01-10 08:01:07 main.py:321] INFO     losses　　Epoch21 [400/2216] Stage 0 = 0.63(1.56)	Stage 1 = 0.50(1.36)	Stage 2 = 0.46(1.30)	Stage 3 = 0.42(1.24)	Stage 4 = 0.37(1.13)
+[2021-01-10 08:01:07 main.py:327] INFO     losses_pix　　Epoch21 [400/2216] Stage 0 = 0.111(0.205)	Stage 1 = 0.093(0.189)	Stage 2 = 0.093(0.186)	Stage 3 = 0.074(0.159)	Stage 4 = 0.068(0.153)
+[2021-01-10 08:11:01 main.py:321] INFO     losses　　Epoch21 [800/2216] Stage 0 = 1.43(1.56)	Stage 1 = 1.32(1.36)	Stage 2 = 1.29(1.30)	Stage 3 = 1.23(1.24)	Stage 4 = 1.16(1.13)
+[2021-01-10 08:11:01 main.py:327] INFO     losses_pix　　Epoch21 [800/2216] Stage 0 = 0.201(0.206)	Stage 1 = 0.194(0.190)	Stage 2 = 0.194(0.187)	Stage 3 = 0.169(0.161)	Stage 4 = 0.162(0.154)
+[2021-01-10 08:20:53 main.py:321] INFO     losses　　Epoch21 [1200/2216] Stage 0 = 1.39(1.55)	Stage 1 = 1.32(1.35)	Stage 2 = 1.33(1.28)	Stage 3 = 1.27(1.23)	Stage 4 = 1.19(1.12)
+[2021-01-10 08:20:53 main.py:327] INFO     losses_pix　　Epoch21 [1200/2216] Stage 0 = 0.212(0.205)	Stage 1 = 0.198(0.189)	Stage 2 = 0.188(0.186)	Stage 3 = 0.168(0.160)	Stage 4 = 0.165(0.153)
+[2021-01-10 08:30:44 main.py:321] INFO     losses　　Epoch21 [1600/2216] Stage 0 = 1.58(1.55)	Stage 1 = 1.33(1.34)	Stage 2 = 1.30(1.28)	Stage 3 = 1.25(1.23)	Stage 4 = 1.15(1.12)
+[2021-01-10 08:30:44 main.py:327] INFO     losses_pix　　Epoch21 [1600/2216] Stage 0 = 0.258(0.204)	Stage 1 = 0.235(0.189)	Stage 2 = 0.232(0.185)	Stage 3 = 0.204(0.159)	Stage 4 = 0.197(0.153)
+[2021-01-10 08:40:33 main.py:321] INFO     losses　　Epoch21 [2000/2216] Stage 0 = 1.62(1.54)	Stage 1 = 1.39(1.34)	Stage 2 = 1.32(1.28)	Stage 3 = 1.27(1.22)	Stage 4 = 1.18(1.12)
+[2021-01-10 08:40:33 main.py:327] INFO     losses_pix　　Epoch21 [2000/2216] Stage 0 = 0.190(0.204)	Stage 1 = 0.174(0.188)	Stage 2 = 0.169(0.185)	Stage 3 = 0.141(0.159)	Stage 4 = 0.137(0.152)
+[2021-01-10 08:45:51 main.py:335] INFO     Average train loss = Stage 0 = 1.54	Stage 1 = 1.34	Stage 2 = 1.28	Stage 3 = 1.22	Stage 4 = 1.12
+[2021-01-10 08:45:51 main.py:338] INFO     Average train thres1 = Stage 0 = 0.204	Stage 1 = 0.188	Stage 2 = 0.185	Stage 3 = 0.159	Stage 4 = 0.152
+[2021-01-10 08:45:52 main.py:227] INFO     This is 22-th epoch
+[2021-01-10 08:45:54 main.py:321] INFO     losses　　Epoch22 [0/2216] Stage 0 = 2.30(2.30)	Stage 1 = 1.83(1.83)	Stage 2 = 1.71(1.71)	Stage 3 = 1.67(1.67)	Stage 4 = 1.59(1.59)
+[2021-01-10 08:45:54 main.py:327] INFO     losses_pix　　Epoch22 [0/2216] Stage 0 = 0.262(0.262)	Stage 1 = 0.251(0.251)	Stage 2 = 0.248(0.248)	Stage 3 = 0.228(0.228)	Stage 4 = 0.221(0.221)
+[2021-01-10 08:55:43 main.py:321] INFO     losses　　Epoch22 [400/2216] Stage 0 = 1.34(1.53)	Stage 1 = 1.16(1.33)	Stage 2 = 1.11(1.27)	Stage 3 = 1.06(1.21)	Stage 4 = 0.98(1.10)
+[2021-01-10 08:55:43 main.py:327] INFO     losses_pix　　Epoch22 [400/2216] Stage 0 = 0.180(0.203)	Stage 1 = 0.168(0.187)	Stage 2 = 0.163(0.184)	Stage 3 = 0.145(0.158)	Stage 4 = 0.137(0.151)
+[2021-01-10 09:05:35 main.py:321] INFO     losses　　Epoch22 [800/2216] Stage 0 = 1.49(1.53)	Stage 1 = 1.19(1.32)	Stage 2 = 1.16(1.26)	Stage 3 = 1.09(1.21)	Stage 4 = 0.98(1.10)
+[2021-01-10 09:05:35 main.py:327] INFO     losses_pix　　Epoch22 [800/2216] Stage 0 = 0.222(0.203)	Stage 1 = 0.207(0.187)	Stage 2 = 0.201(0.184)	Stage 3 = 0.164(0.158)	Stage 4 = 0.156(0.151)
+[2021-01-10 09:15:28 main.py:321] INFO     losses　　Epoch22 [1200/2216] Stage 0 = 1.62(1.53)	Stage 1 = 1.16(1.33)	Stage 2 = 1.05(1.27)	Stage 3 = 0.99(1.21)	Stage 4 = 0.92(1.10)
+[2021-01-10 09:15:28 main.py:327] INFO     losses_pix　　Epoch22 [1200/2216] Stage 0 = 0.247(0.203)	Stage 1 = 0.221(0.187)	Stage 2 = 0.214(0.184)	Stage 3 = 0.184(0.158)	Stage 4 = 0.180(0.151)
+[2021-01-10 09:25:20 main.py:321] INFO     losses　　Epoch22 [1600/2216] Stage 0 = 0.96(1.52)	Stage 1 = 0.81(1.32)	Stage 2 = 0.74(1.26)	Stage 3 = 0.68(1.20)	Stage 4 = 0.62(1.10)
+[2021-01-10 09:25:20 main.py:327] INFO     losses_pix　　Epoch22 [1600/2216] Stage 0 = 0.207(0.203)	Stage 1 = 0.189(0.187)	Stage 2 = 0.185(0.184)	Stage 3 = 0.157(0.158)	Stage 4 = 0.149(0.151)
+[2021-01-10 09:35:14 main.py:321] INFO     losses　　Epoch22 [2000/2216] Stage 0 = 1.39(1.51)	Stage 1 = 1.15(1.31)	Stage 2 = 1.10(1.26)	Stage 3 = 1.03(1.20)	Stage 4 = 0.92(1.09)
+[2021-01-10 09:35:14 main.py:327] INFO     losses_pix　　Epoch22 [2000/2216] Stage 0 = 0.211(0.202)	Stage 1 = 0.184(0.186)	Stage 2 = 0.185(0.183)	Stage 3 = 0.151(0.157)	Stage 4 = 0.143(0.150)
+[2021-01-10 09:40:34 main.py:335] INFO     Average train loss = Stage 0 = 1.51	Stage 1 = 1.31	Stage 2 = 1.25	Stage 3 = 1.20	Stage 4 = 1.09
+[2021-01-10 09:40:34 main.py:338] INFO     Average train thres1 = Stage 0 = 0.202	Stage 1 = 0.186	Stage 2 = 0.183	Stage 3 = 0.157	Stage 4 = 0.150
+[2021-01-10 09:40:34 main.py:227] INFO     This is 23-th epoch
+[2021-01-10 09:40:36 main.py:321] INFO     losses　　Epoch23 [0/2216] Stage 0 = 1.70(1.70)	Stage 1 = 1.59(1.59)	Stage 2 = 1.61(1.61)	Stage 3 = 1.58(1.58)	Stage 4 = 1.47(1.47)
+[2021-01-10 09:40:36 main.py:327] INFO     losses_pix　　Epoch23 [0/2216] Stage 0 = 0.199(0.199)	Stage 1 = 0.182(0.182)	Stage 2 = 0.180(0.180)	Stage 3 = 0.160(0.160)	Stage 4 = 0.153(0.153)
+[2021-01-10 09:50:29 main.py:321] INFO     losses　　Epoch23 [400/2216] Stage 0 = 1.06(1.53)	Stage 1 = 0.95(1.33)	Stage 2 = 0.94(1.27)	Stage 3 = 0.89(1.22)	Stage 4 = 0.78(1.11)
+[2021-01-10 09:50:29 main.py:327] INFO     losses_pix　　Epoch23 [400/2216] Stage 0 = 0.161(0.203)	Stage 1 = 0.140(0.187)	Stage 2 = 0.138(0.183)	Stage 3 = 0.116(0.158)	Stage 4 = 0.110(0.151)
+[2021-01-10 10:00:20 main.py:321] INFO     losses　　Epoch23 [800/2216] Stage 0 = 1.95(1.55)	Stage 1 = 1.69(1.35)	Stage 2 = 1.60(1.29)	Stage 3 = 1.54(1.23)	Stage 4 = 1.44(1.12)
+[2021-01-10 10:00:20 main.py:327] INFO     losses_pix　　Epoch23 [800/2216] Stage 0 = 0.266(0.204)	Stage 1 = 0.242(0.189)	Stage 2 = 0.237(0.185)	Stage 3 = 0.212(0.159)	Stage 4 = 0.206(0.153)
+[2021-01-10 10:10:11 main.py:321] INFO     losses　　Epoch23 [1200/2216] Stage 0 = 2.12(1.53)	Stage 1 = 1.88(1.34)	Stage 2 = 1.82(1.28)	Stage 3 = 1.76(1.22)	Stage 4 = 1.66(1.12)
+[2021-01-10 10:10:11 main.py:327] INFO     losses_pix　　Epoch23 [1200/2216] Stage 0 = 0.187(0.203)	Stage 1 = 0.180(0.188)	Stage 2 = 0.179(0.184)	Stage 3 = 0.159(0.159)	Stage 4 = 0.154(0.152)
+[2021-01-10 10:20:05 main.py:321] INFO     losses　　Epoch23 [1600/2216] Stage 0 = 1.12(1.53)	Stage 1 = 0.96(1.33)	Stage 2 = 0.94(1.27)	Stage 3 = 0.89(1.22)	Stage 4 = 0.80(1.11)
+[2021-01-10 10:20:05 main.py:327] INFO     losses_pix　　Epoch23 [1600/2216] Stage 0 = 0.186(0.203)	Stage 1 = 0.171(0.187)	Stage 2 = 0.169(0.184)	Stage 3 = 0.141(0.158)	Stage 4 = 0.133(0.151)
+[2021-01-10 10:30:00 main.py:321] INFO     losses　　Epoch23 [2000/2216] Stage 0 = 1.04(1.53)	Stage 1 = 0.92(1.33)	Stage 2 = 0.88(1.27)	Stage 3 = 0.82(1.22)	Stage 4 = 0.75(1.11)
+[2021-01-10 10:30:00 main.py:327] INFO     losses_pix　　Epoch23 [2000/2216] Stage 0 = 0.155(0.203)	Stage 1 = 0.143(0.187)	Stage 2 = 0.137(0.184)	Stage 3 = 0.112(0.158)	Stage 4 = 0.105(0.151)
+[2021-01-10 10:35:20 main.py:335] INFO     Average train loss = Stage 0 = 1.53	Stage 1 = 1.33	Stage 2 = 1.27	Stage 3 = 1.21	Stage 4 = 1.11
+[2021-01-10 10:35:20 main.py:338] INFO     Average train thres1 = Stage 0 = 0.203	Stage 1 = 0.187	Stage 2 = 0.184	Stage 3 = 0.158	Stage 4 = 0.151
+[2021-01-10 10:35:20 main.py:227] INFO     This is 24-th epoch
+[2021-01-10 10:35:22 main.py:321] INFO     losses　　Epoch24 [0/2216] Stage 0 = 1.32(1.32)	Stage 1 = 1.20(1.20)	Stage 2 = 1.19(1.19)	Stage 3 = 1.12(1.12)	Stage 4 = 1.00(1.00)
+[2021-01-10 10:35:22 main.py:327] INFO     losses_pix　　Epoch24 [0/2216] Stage 0 = 0.186(0.186)	Stage 1 = 0.179(0.179)	Stage 2 = 0.178(0.178)	Stage 3 = 0.136(0.136)	Stage 4 = 0.126(0.126)
+[2021-01-10 10:45:16 main.py:321] INFO     losses　　Epoch24 [400/2216] Stage 0 = 2.29(1.55)	Stage 1 = 2.07(1.35)	Stage 2 = 2.01(1.29)	Stage 3 = 1.96(1.24)	Stage 4 = 1.80(1.13)
+[2021-01-10 10:45:16 main.py:327] INFO     losses_pix　　Epoch24 [400/2216] Stage 0 = 0.266(0.204)	Stage 1 = 0.248(0.188)	Stage 2 = 0.243(0.185)	Stage 3 = 0.216(0.160)	Stage 4 = 0.210(0.153)
+[2021-01-10 10:55:06 main.py:321] INFO     losses　　Epoch24 [800/2216] Stage 0 = 1.02(1.52)	Stage 1 = 0.86(1.32)	Stage 2 = 0.82(1.27)	Stage 3 = 0.77(1.21)	Stage 4 = 0.67(1.10)
+[2021-01-10 10:55:06 main.py:327] INFO     losses_pix　　Epoch24 [800/2216] Stage 0 = 0.157(0.201)	Stage 1 = 0.137(0.186)	Stage 2 = 0.132(0.182)	Stage 3 = 0.108(0.157)	Stage 4 = 0.101(0.150)
+[2021-01-10 11:04:56 main.py:321] INFO     losses　　Epoch24 [1200/2216] Stage 0 = 1.72(1.50)	Stage 1 = 1.51(1.31)	Stage 2 = 1.46(1.25)	Stage 3 = 1.39(1.19)	Stage 4 = 1.29(1.09)
+[2021-01-10 11:04:56 main.py:327] INFO     losses_pix　　Epoch24 [1200/2216] Stage 0 = 0.259(0.200)	Stage 1 = 0.247(0.185)	Stage 2 = 0.246(0.182)	Stage 3 = 0.218(0.156)	Stage 4 = 0.211(0.149)
+[2021-01-10 11:14:44 main.py:321] INFO     losses　　Epoch24 [1600/2216] Stage 0 = 1.50(1.50)	Stage 1 = 1.37(1.31)	Stage 2 = 1.31(1.25)	Stage 3 = 1.26(1.20)	Stage 4 = 1.11(1.09)
+[2021-01-10 11:14:44 main.py:327] INFO     losses_pix　　Epoch24 [1600/2216] Stage 0 = 0.186(0.200)	Stage 1 = 0.169(0.185)	Stage 2 = 0.163(0.182)	Stage 3 = 0.138(0.156)	Stage 4 = 0.130(0.150)
+[2021-01-10 11:24:33 main.py:321] INFO     losses　　Epoch24 [2000/2216] Stage 0 = 1.77(1.50)	Stage 1 = 1.58(1.31)	Stage 2 = 1.55(1.25)	Stage 3 = 1.50(1.19)	Stage 4 = 1.42(1.09)
+[2021-01-10 11:24:33 main.py:327] INFO     losses_pix　　Epoch24 [2000/2216] Stage 0 = 0.207(0.200)	Stage 1 = 0.194(0.185)	Stage 2 = 0.191(0.182)	Stage 3 = 0.163(0.156)	Stage 4 = 0.157(0.149)
+[2021-01-10 11:29:51 main.py:335] INFO     Average train loss = Stage 0 = 1.50	Stage 1 = 1.31	Stage 2 = 1.25	Stage 3 = 1.19	Stage 4 = 1.09
+[2021-01-10 11:29:51 main.py:338] INFO     Average train thres1 = Stage 0 = 0.201	Stage 1 = 0.185	Stage 2 = 0.182	Stage 3 = 0.157	Stage 4 = 0.150
+[2021-01-10 11:29:51 main.py:227] INFO     This is 25-th epoch
+[2021-01-10 11:29:53 main.py:321] INFO     losses　　Epoch25 [0/2216] Stage 0 = 0.90(0.90)	Stage 1 = 0.81(0.81)	Stage 2 = 0.81(0.81)	Stage 3 = 0.76(0.76)	Stage 4 = 0.67(0.67)
+[2021-01-10 11:29:53 main.py:327] INFO     losses_pix　　Epoch25 [0/2216] Stage 0 = 0.145(0.145)	Stage 1 = 0.137(0.137)	Stage 2 = 0.137(0.137)	Stage 3 = 0.112(0.112)	Stage 4 = 0.105(0.105)
+[2021-01-10 11:39:44 main.py:321] INFO     losses　　Epoch25 [400/2216] Stage 0 = 1.63(1.47)	Stage 1 = 1.46(1.28)	Stage 2 = 1.43(1.22)	Stage 3 = 1.38(1.17)	Stage 4 = 1.25(1.06)
+[2021-01-10 11:39:44 main.py:327] INFO     losses_pix　　Epoch25 [400/2216] Stage 0 = 0.177(0.197)	Stage 1 = 0.158(0.181)	Stage 2 = 0.156(0.178)	Stage 3 = 0.129(0.152)	Stage 4 = 0.124(0.145)
+[2021-01-10 11:49:35 main.py:321] INFO     losses　　Epoch25 [800/2216] Stage 0 = 0.93(1.48)	Stage 1 = 0.80(1.29)	Stage 2 = 0.77(1.23)	Stage 3 = 0.72(1.17)	Stage 4 = 0.65(1.07)
+[2021-01-10 11:49:35 main.py:327] INFO     losses_pix　　Epoch25 [800/2216] Stage 0 = 0.164(0.197)	Stage 1 = 0.152(0.181)	Stage 2 = 0.148(0.178)	Stage 3 = 0.127(0.153)	Stage 4 = 0.119(0.146)
+[2021-01-10 11:59:26 main.py:321] INFO     losses　　Epoch25 [1200/2216] Stage 0 = 1.88(1.47)	Stage 1 = 1.52(1.28)	Stage 2 = 1.40(1.23)	Stage 3 = 1.34(1.17)	Stage 4 = 1.25(1.07)
+[2021-01-10 11:59:26 main.py:327] INFO     losses_pix　　Epoch25 [1200/2216] Stage 0 = 0.220(0.198)	Stage 1 = 0.198(0.182)	Stage 2 = 0.197(0.178)	Stage 3 = 0.172(0.154)	Stage 4 = 0.165(0.147)
+[2021-01-10 12:09:17 main.py:321] INFO     losses　　Epoch25 [1600/2216] Stage 0 = 1.76(1.48)	Stage 1 = 1.63(1.29)	Stage 2 = 1.55(1.23)	Stage 3 = 1.48(1.18)	Stage 4 = 1.34(1.07)
+[2021-01-10 12:09:17 main.py:327] INFO     losses_pix　　Epoch25 [1600/2216] Stage 0 = 0.243(0.199)	Stage 1 = 0.231(0.183)	Stage 2 = 0.228(0.179)	Stage 3 = 0.200(0.155)	Stage 4 = 0.192(0.148)
+[2021-01-10 12:19:09 main.py:321] INFO     losses　　Epoch25 [2000/2216] Stage 0 = 1.19(1.48)	Stage 1 = 1.07(1.29)	Stage 2 = 1.08(1.23)	Stage 3 = 1.03(1.17)	Stage 4 = 0.92(1.07)
+[2021-01-10 12:19:09 main.py:327] INFO     losses_pix　　Epoch25 [2000/2216] Stage 0 = 0.168(0.199)	Stage 1 = 0.154(0.183)	Stage 2 = 0.159(0.180)	Stage 3 = 0.145(0.155)	Stage 4 = 0.138(0.148)
+[2021-01-10 12:24:27 main.py:335] INFO     Average train loss = Stage 0 = 1.48	Stage 1 = 1.29	Stage 2 = 1.23	Stage 3 = 1.18	Stage 4 = 1.07
+[2021-01-10 12:24:27 main.py:338] INFO     Average train thres1 = Stage 0 = 0.199	Stage 1 = 0.183	Stage 2 = 0.180	Stage 3 = 0.155	Stage 4 = 0.148
+[2021-01-10 12:24:28 main.py:227] INFO     This is 26-th epoch
+[2021-01-10 12:24:30 main.py:321] INFO     losses　　Epoch26 [0/2216] Stage 0 = 0.91(0.91)	Stage 1 = 0.81(0.81)	Stage 2 = 0.79(0.79)	Stage 3 = 0.74(0.74)	Stage 4 = 0.67(0.67)
+[2021-01-10 12:24:30 main.py:327] INFO     losses_pix　　Epoch26 [0/2216] Stage 0 = 0.167(0.167)	Stage 1 = 0.146(0.146)	Stage 2 = 0.143(0.143)	Stage 3 = 0.121(0.121)	Stage 4 = 0.116(0.116)
+[2021-01-10 12:34:19 main.py:321] INFO     losses　　Epoch26 [400/2216] Stage 0 = 1.95(1.46)	Stage 1 = 1.70(1.27)	Stage 2 = 1.65(1.20)	Stage 3 = 1.60(1.15)	Stage 4 = 1.45(1.05)
+[2021-01-10 12:34:19 main.py:327] INFO     losses_pix　　Epoch26 [400/2216] Stage 0 = 0.220(0.197)	Stage 1 = 0.206(0.181)	Stage 2 = 0.205(0.177)	Stage 3 = 0.185(0.152)	Stage 4 = 0.177(0.145)
+[2021-01-10 12:44:11 main.py:321] INFO     losses　　Epoch26 [800/2216] Stage 0 = 2.35(1.45)	Stage 1 = 2.03(1.26)	Stage 2 = 2.02(1.20)	Stage 3 = 1.96(1.14)	Stage 4 = 1.84(1.04)
+[2021-01-10 12:44:11 main.py:327] INFO     losses_pix　　Epoch26 [800/2216] Stage 0 = 0.315(0.197)	Stage 1 = 0.292(0.181)	Stage 2 = 0.282(0.177)	Stage 3 = 0.256(0.152)	Stage 4 = 0.248(0.145)
+[2021-01-10 12:54:05 main.py:321] INFO     losses　　Epoch26 [1200/2216] Stage 0 = 0.99(1.45)	Stage 1 = 0.86(1.26)	Stage 2 = 0.83(1.20)	Stage 3 = 0.78(1.14)	Stage 4 = 0.69(1.04)
+[2021-01-10 12:54:05 main.py:327] INFO     losses_pix　　Epoch26 [1200/2216] Stage 0 = 0.198(0.197)	Stage 1 = 0.183(0.181)	Stage 2 = 0.177(0.177)	Stage 3 = 0.151(0.153)	Stage 4 = 0.145(0.146)
+[2021-01-10 13:03:58 main.py:321] INFO     losses　　Epoch26 [1600/2216] Stage 0 = 0.96(1.45)	Stage 1 = 0.84(1.26)	Stage 2 = 0.83(1.20)	Stage 3 = 0.77(1.14)	Stage 4 = 0.68(1.04)
+[2021-01-10 13:03:58 main.py:327] INFO     losses_pix　　Epoch26 [1600/2216] Stage 0 = 0.188(0.197)	Stage 1 = 0.173(0.181)	Stage 2 = 0.173(0.177)	Stage 3 = 0.138(0.153)	Stage 4 = 0.131(0.146)
+[2021-01-10 13:13:50 main.py:321] INFO     losses　　Epoch26 [2000/2216] Stage 0 = 1.64(1.45)	Stage 1 = 1.21(1.26)	Stage 2 = 1.04(1.20)	Stage 3 = 0.98(1.15)	Stage 4 = 0.89(1.04)
+[2021-01-10 13:13:50 main.py:327] INFO     losses_pix　　Epoch26 [2000/2216] Stage 0 = 0.198(0.198)	Stage 1 = 0.173(0.182)	Stage 2 = 0.162(0.179)	Stage 3 = 0.137(0.154)	Stage 4 = 0.129(0.147)
+[2021-01-10 13:19:08 main.py:335] INFO     Average train loss = Stage 0 = 1.45	Stage 1 = 1.26	Stage 2 = 1.20	Stage 3 = 1.15	Stage 4 = 1.05
+[2021-01-10 13:19:08 main.py:338] INFO     Average train thres1 = Stage 0 = 0.198	Stage 1 = 0.182	Stage 2 = 0.179	Stage 3 = 0.154	Stage 4 = 0.147
+[2021-01-10 13:19:09 main.py:227] INFO     This is 27-th epoch
+[2021-01-10 13:19:10 main.py:321] INFO     losses　　Epoch27 [0/2216] Stage 0 = 1.80(1.80)	Stage 1 = 1.26(1.26)	Stage 2 = 1.22(1.22)	Stage 3 = 1.16(1.16)	Stage 4 = 1.04(1.04)
+[2021-01-10 13:19:10 main.py:327] INFO     losses_pix　　Epoch27 [0/2216] Stage 0 = 0.214(0.214)	Stage 1 = 0.186(0.186)	Stage 2 = 0.179(0.179)	Stage 3 = 0.157(0.157)	Stage 4 = 0.150(0.150)
+[2021-01-10 13:29:02 main.py:321] INFO     losses　　Epoch27 [400/2216] Stage 0 = 1.76(1.48)	Stage 1 = 1.60(1.28)	Stage 2 = 1.55(1.22)	Stage 3 = 1.49(1.17)	Stage 4 = 1.32(1.06)
+[2021-01-10 13:29:02 main.py:327] INFO     losses_pix　　Epoch27 [400/2216] Stage 0 = 0.233(0.199)	Stage 1 = 0.216(0.184)	Stage 2 = 0.213(0.180)	Stage 3 = 0.189(0.155)	Stage 4 = 0.180(0.148)
+[2021-01-10 13:38:56 main.py:321] INFO     losses　　Epoch27 [800/2216] Stage 0 = 0.70(1.45)	Stage 1 = 0.57(1.25)	Stage 2 = 0.54(1.19)	Stage 3 = 0.49(1.14)	Stage 4 = 0.42(1.04)
+[2021-01-10 13:38:56 main.py:327] INFO     losses_pix　　Epoch27 [800/2216] Stage 0 = 0.134(0.197)	Stage 1 = 0.111(0.181)	Stage 2 = 0.108(0.178)	Stage 3 = 0.085(0.153)	Stage 4 = 0.078(0.146)
+[2021-01-10 13:48:49 main.py:321] INFO     losses　　Epoch27 [1200/2216] Stage 0 = 1.52(1.44)	Stage 1 = 1.41(1.26)	Stage 2 = 1.40(1.20)	Stage 3 = 1.35(1.14)	Stage 4 = 1.25(1.04)
+[2021-01-10 13:48:49 main.py:327] INFO     losses_pix　　Epoch27 [1200/2216] Stage 0 = 0.200(0.197)	Stage 1 = 0.189(0.181)	Stage 2 = 0.187(0.178)	Stage 3 = 0.158(0.153)	Stage 4 = 0.151(0.146)
+[2021-01-10 13:58:41 main.py:321] INFO     losses　　Epoch27 [1600/2216] Stage 0 = 0.98(1.44)	Stage 1 = 0.82(1.25)	Stage 2 = 0.76(1.19)	Stage 3 = 0.70(1.14)	Stage 4 = 0.58(1.04)
+[2021-01-10 13:58:41 main.py:327] INFO     losses_pix　　Epoch27 [1600/2216] Stage 0 = 0.174(0.197)	Stage 1 = 0.146(0.181)	Stage 2 = 0.144(0.178)	Stage 3 = 0.116(0.153)	Stage 4 = 0.108(0.146)
+[2021-01-10 14:08:33 main.py:321] INFO     losses　　Epoch27 [2000/2216] Stage 0 = 1.51(1.45)	Stage 1 = 1.24(1.26)	Stage 2 = 1.22(1.20)	Stage 3 = 1.16(1.15)	Stage 4 = 1.03(1.04)
+[2021-01-10 14:08:33 main.py:327] INFO     losses_pix　　Epoch27 [2000/2216] Stage 0 = 0.214(0.198)	Stage 1 = 0.193(0.182)	Stage 2 = 0.190(0.178)	Stage 3 = 0.159(0.154)	Stage 4 = 0.150(0.147)
+[2021-01-10 14:13:52 main.py:335] INFO     Average train loss = Stage 0 = 1.44	Stage 1 = 1.25	Stage 2 = 1.19	Stage 3 = 1.14	Stage 4 = 1.04
+[2021-01-10 14:13:52 main.py:338] INFO     Average train thres1 = Stage 0 = 0.197	Stage 1 = 0.182	Stage 2 = 0.178	Stage 3 = 0.153	Stage 4 = 0.146
+[2021-01-10 14:13:52 main.py:227] INFO     This is 28-th epoch
+[2021-01-10 14:13:54 main.py:321] INFO     losses　　Epoch28 [0/2216] Stage 0 = 1.68(1.68)	Stage 1 = 1.33(1.33)	Stage 2 = 1.12(1.12)	Stage 3 = 1.07(1.07)	Stage 4 = 0.99(0.99)
+[2021-01-10 14:13:54 main.py:327] INFO     losses_pix　　Epoch28 [0/2216] Stage 0 = 0.198(0.198)	Stage 1 = 0.186(0.186)	Stage 2 = 0.185(0.185)	Stage 3 = 0.163(0.163)	Stage 4 = 0.156(0.156)
+[2021-01-10 14:23:48 main.py:321] INFO     losses　　Epoch28 [400/2216] Stage 0 = 1.58(1.46)	Stage 1 = 1.52(1.27)	Stage 2 = 1.50(1.20)	Stage 3 = 1.45(1.15)	Stage 4 = 1.34(1.05)
+[2021-01-10 14:23:48 main.py:327] INFO     losses_pix　　Epoch28 [400/2216] Stage 0 = 0.200(0.199)	Stage 1 = 0.190(0.184)	Stage 2 = 0.191(0.180)	Stage 3 = 0.168(0.155)	Stage 4 = 0.159(0.148)
+[2021-01-10 14:33:42 main.py:321] INFO     losses　　Epoch28 [800/2216] Stage 0 = 2.34(1.46)	Stage 1 = 2.12(1.27)	Stage 2 = 2.04(1.21)	Stage 3 = 1.97(1.15)	Stage 4 = 1.82(1.05)
+[2021-01-10 14:33:42 main.py:327] INFO     losses_pix　　Epoch28 [800/2216] Stage 0 = 0.230(0.198)	Stage 1 = 0.221(0.183)	Stage 2 = 0.222(0.179)	Stage 3 = 0.205(0.154)	Stage 4 = 0.197(0.147)
+[2021-01-10 14:43:35 main.py:321] INFO     losses　　Epoch28 [1200/2216] Stage 0 = 1.17(1.45)	Stage 1 = 0.93(1.26)	Stage 2 = 0.89(1.20)	Stage 3 = 0.83(1.15)	Stage 4 = 0.74(1.04)
+[2021-01-10 14:43:35 main.py:327] INFO     losses_pix　　Epoch28 [1200/2216] Stage 0 = 0.155(0.197)	Stage 1 = 0.139(0.182)	Stage 2 = 0.134(0.178)	Stage 3 = 0.110(0.153)	Stage 4 = 0.102(0.146)
+[2021-01-10 14:53:29 main.py:321] INFO     losses　　Epoch28 [1600/2216] Stage 0 = 2.25(1.44)	Stage 1 = 1.48(1.25)	Stage 2 = 1.13(1.19)	Stage 3 = 1.06(1.14)	Stage 4 = 0.97(1.03)
+[2021-01-10 14:53:29 main.py:327] INFO     losses_pix　　Epoch28 [1600/2216] Stage 0 = 0.205(0.196)	Stage 1 = 0.188(0.181)	Stage 2 = 0.181(0.177)	Stage 3 = 0.155(0.153)	Stage 4 = 0.150(0.146)
+[2021-01-10 15:03:20 main.py:321] INFO     losses　　Epoch28 [2000/2216] Stage 0 = 1.38(1.44)	Stage 1 = 1.23(1.25)	Stage 2 = 1.20(1.19)	Stage 3 = 1.15(1.14)	Stage 4 = 1.02(1.04)
+[2021-01-10 15:03:20 main.py:327] INFO     losses_pix　　Epoch28 [2000/2216] Stage 0 = 0.175(0.197)	Stage 1 = 0.162(0.181)	Stage 2 = 0.158(0.177)	Stage 3 = 0.137(0.153)	Stage 4 = 0.131(0.146)
+[2021-01-10 15:08:38 main.py:335] INFO     Average train loss = Stage 0 = 1.44	Stage 1 = 1.25	Stage 2 = 1.19	Stage 3 = 1.14	Stage 4 = 1.03
+[2021-01-10 15:08:38 main.py:338] INFO     Average train thres1 = Stage 0 = 0.197	Stage 1 = 0.181	Stage 2 = 0.177	Stage 3 = 0.153	Stage 4 = 0.146
+[2021-01-10 15:08:38 main.py:227] INFO     This is 29-th epoch
+[2021-01-10 15:08:40 main.py:321] INFO     losses　　Epoch29 [0/2216] Stage 0 = 0.96(0.96)	Stage 1 = 0.83(0.83)	Stage 2 = 0.80(0.80)	Stage 3 = 0.76(0.76)	Stage 4 = 0.70(0.70)
+[2021-01-10 15:08:40 main.py:327] INFO     losses_pix　　Epoch29 [0/2216] Stage 0 = 0.161(0.161)	Stage 1 = 0.141(0.141)	Stage 2 = 0.135(0.135)	Stage 3 = 0.112(0.112)	Stage 4 = 0.106(0.106)
+[2021-01-10 15:18:29 main.py:321] INFO     losses　　Epoch29 [400/2216] Stage 0 = 1.13(1.41)	Stage 1 = 1.03(1.23)	Stage 2 = 0.89(1.17)	Stage 3 = 0.86(1.11)	Stage 4 = 0.78(1.01)
+[2021-01-10 15:18:29 main.py:327] INFO     losses_pix　　Epoch29 [400/2216] Stage 0 = 0.165(0.197)	Stage 1 = 0.147(0.181)	Stage 2 = 0.141(0.177)	Stage 3 = 0.122(0.152)	Stage 4 = 0.115(0.146)
+[2021-01-10 15:28:17 main.py:321] INFO     losses　　Epoch29 [800/2216] Stage 0 = 1.22(1.42)	Stage 1 = 1.08(1.23)	Stage 2 = 1.07(1.18)	Stage 3 = 1.02(1.12)	Stage 4 = 0.93(1.02)
+[2021-01-10 15:28:17 main.py:327] INFO     losses_pix　　Epoch29 [800/2216] Stage 0 = 0.188(0.196)	Stage 1 = 0.173(0.181)	Stage 2 = 0.172(0.177)	Stage 3 = 0.145(0.152)	Stage 4 = 0.138(0.145)
+[2021-01-10 15:38:06 main.py:321] INFO     losses　　Epoch29 [1200/2216] Stage 0 = 0.94(1.43)	Stage 1 = 0.83(1.23)	Stage 2 = 0.79(1.18)	Stage 3 = 0.74(1.13)	Stage 4 = 0.67(1.02)
+[2021-01-10 15:38:06 main.py:327] INFO     losses_pix　　Epoch29 [1200/2216] Stage 0 = 0.174(0.196)	Stage 1 = 0.154(0.180)	Stage 2 = 0.151(0.177)	Stage 3 = 0.130(0.152)	Stage 4 = 0.125(0.145)
+[2021-01-10 15:47:55 main.py:321] INFO     losses　　Epoch29 [1600/2216] Stage 0 = 2.35(1.43)	Stage 1 = 2.03(1.24)	Stage 2 = 1.91(1.18)	Stage 3 = 1.85(1.13)	Stage 4 = 1.71(1.02)
+[2021-01-10 15:47:55 main.py:327] INFO     losses_pix　　Epoch29 [1600/2216] Stage 0 = 0.224(0.196)	Stage 1 = 0.206(0.180)	Stage 2 = 0.205(0.176)	Stage 3 = 0.178(0.152)	Stage 4 = 0.171(0.145)
+[2021-01-10 15:57:48 main.py:321] INFO     losses　　Epoch29 [2000/2216] Stage 0 = 1.84(1.43)	Stage 1 = 1.71(1.24)	Stage 2 = 1.67(1.18)	Stage 3 = 1.61(1.13)	Stage 4 = 1.52(1.03)
+[2021-01-10 15:57:48 main.py:327] INFO     losses_pix　　Epoch29 [2000/2216] Stage 0 = 0.241(0.196)	Stage 1 = 0.210(0.180)	Stage 2 = 0.199(0.177)	Stage 3 = 0.172(0.152)	Stage 4 = 0.166(0.145)
+[2021-01-10 16:03:07 main.py:335] INFO     Average train loss = Stage 0 = 1.43	Stage 1 = 1.24	Stage 2 = 1.18	Stage 3 = 1.13	Stage 4 = 1.03
+[2021-01-10 16:03:07 main.py:338] INFO     Average train thres1 = Stage 0 = 0.196	Stage 1 = 0.180	Stage 2 = 0.177	Stage 3 = 0.152	Stage 4 = 0.145
+[2021-01-10 16:03:07 main.py:227] INFO     This is 30-th epoch
+[2021-01-10 16:03:09 main.py:321] INFO     losses　　Epoch30 [0/2216] Stage 0 = 1.03(1.03)	Stage 1 = 0.95(0.95)	Stage 2 = 0.96(0.96)	Stage 3 = 0.91(0.91)	Stage 4 = 0.83(0.83)
+[2021-01-10 16:03:09 main.py:327] INFO     losses_pix　　Epoch30 [0/2216] Stage 0 = 0.164(0.164)	Stage 1 = 0.154(0.154)	Stage 2 = 0.153(0.153)	Stage 3 = 0.130(0.130)	Stage 4 = 0.123(0.123)
+[2021-01-10 16:13:01 main.py:321] INFO     losses　　Epoch30 [400/2216] Stage 0 = 1.41(1.40)	Stage 1 = 1.20(1.22)	Stage 2 = 1.18(1.16)	Stage 3 = 1.13(1.11)	Stage 4 = 1.01(1.00)
+[2021-01-10 16:13:01 main.py:327] INFO     losses_pix　　Epoch30 [400/2216] Stage 0 = 0.214(0.196)	Stage 1 = 0.194(0.180)	Stage 2 = 0.189(0.176)	Stage 3 = 0.168(0.152)	Stage 4 = 0.163(0.145)
+[2021-01-10 16:22:54 main.py:321] INFO     losses　　Epoch30 [800/2216] Stage 0 = 1.48(1.41)	Stage 1 = 1.19(1.22)	Stage 2 = 1.17(1.16)	Stage 3 = 1.12(1.11)	Stage 4 = 1.03(1.01)
+[2021-01-10 16:22:54 main.py:327] INFO     losses_pix　　Epoch30 [800/2216] Stage 0 = 0.206(0.196)	Stage 1 = 0.199(0.180)	Stage 2 = 0.196(0.176)	Stage 3 = 0.173(0.152)	Stage 4 = 0.166(0.145)
+[2021-01-10 16:32:45 main.py:321] INFO     losses　　Epoch30 [1200/2216] Stage 0 = 0.87(1.42)	Stage 1 = 0.77(1.23)	Stage 2 = 0.75(1.17)	Stage 3 = 0.70(1.12)	Stage 4 = 0.63(1.02)
+[2021-01-10 16:32:45 main.py:327] INFO     losses_pix　　Epoch30 [1200/2216] Stage 0 = 0.164(0.197)	Stage 1 = 0.142(0.181)	Stage 2 = 0.138(0.177)	Stage 3 = 0.115(0.153)	Stage 4 = 0.109(0.146)
+[2021-01-10 16:42:36 main.py:321] INFO     losses　　Epoch30 [1600/2216] Stage 0 = 1.01(1.43)	Stage 1 = 0.95(1.24)	Stage 2 = 0.92(1.18)	Stage 3 = 0.88(1.13)	Stage 4 = 0.78(1.02)
+[2021-01-10 16:42:36 main.py:327] INFO     losses_pix　　Epoch30 [1600/2216] Stage 0 = 0.164(0.197)	Stage 1 = 0.152(0.181)	Stage 2 = 0.150(0.177)	Stage 3 = 0.127(0.153)	Stage 4 = 0.122(0.146)
+[2021-01-10 16:52:28 main.py:321] INFO     losses　　Epoch30 [2000/2216] Stage 0 = 1.31(1.43)	Stage 1 = 1.14(1.24)	Stage 2 = 1.06(1.18)	Stage 3 = 1.01(1.13)	Stage 4 = 0.91(1.02)
+[2021-01-10 16:52:28 main.py:327] INFO     losses_pix　　Epoch30 [2000/2216] Stage 0 = 0.192(0.197)	Stage 1 = 0.175(0.181)	Stage 2 = 0.172(0.177)	Stage 3 = 0.148(0.153)	Stage 4 = 0.140(0.146)
+[2021-01-10 16:57:48 main.py:335] INFO     Average train loss = Stage 0 = 1.43	Stage 1 = 1.24	Stage 2 = 1.18	Stage 3 = 1.13	Stage 4 = 1.02
+[2021-01-10 16:57:48 main.py:338] INFO     Average train thres1 = Stage 0 = 0.197	Stage 1 = 0.181	Stage 2 = 0.177	Stage 3 = 0.153	Stage 4 = 0.146
+[2021-01-10 16:57:49 main.py:444] INFO     EPEs　　[0/4370] Stage 0 = 1.19(1.19)
+[2021-01-10 16:57:49 main.py:447] INFO     thres1　　[0/4370] Stage 0 = 0.158(0.158)
+[2021-01-10 16:59:25 main.py:444] INFO     EPEs　　[400/4370] Stage 0 = 0.64(0.95)
+[2021-01-10 16:59:25 main.py:447] INFO     thres1　　[400/4370] Stage 0 = 0.118(0.104)
+[2021-01-10 17:01:00 main.py:444] INFO     EPEs　　[800/4370] Stage 0 = 0.52(0.96)
+[2021-01-10 17:01:00 main.py:447] INFO     thres1　　[800/4370] Stage 0 = 0.072(0.104)
+[2021-01-10 17:02:36 main.py:444] INFO     EPEs　　[1200/4370] Stage 0 = 0.58(0.90)
+[2021-01-10 17:02:36 main.py:447] INFO     thres1　　[1200/4370] Stage 0 = 0.077(0.099)
+[2021-01-10 17:04:12 main.py:444] INFO     EPEs　　[1600/4370] Stage 0 = 0.56(0.85)
+[2021-01-10 17:04:12 main.py:447] INFO     thres1　　[1600/4370] Stage 0 = 0.074(0.094)
+[2021-01-10 17:05:48 main.py:444] INFO     EPEs　　[2000/4370] Stage 0 = 0.60(0.88)
+[2021-01-10 17:05:48 main.py:447] INFO     thres1　　[2000/4370] Stage 0 = 0.088(0.097)
+[2021-01-10 17:07:24 main.py:444] INFO     EPEs　　[2400/4370] Stage 0 = 0.36(0.84)
+[2021-01-10 17:07:24 main.py:447] INFO     thres1　　[2400/4370] Stage 0 = 0.038(0.093)
+[2021-01-10 17:09:00 main.py:444] INFO     EPEs　　[2800/4370] Stage 0 = 0.86(0.83)
+[2021-01-10 17:09:00 main.py:447] INFO     thres1　　[2800/4370] Stage 0 = 0.097(0.094)
+[2021-01-10 17:10:36 main.py:444] INFO     EPEs　　[3200/4370] Stage 0 = 0.51(0.84)
+[2021-01-10 17:10:36 main.py:447] INFO     thres1　　[3200/4370] Stage 0 = 0.052(0.093)
+[2021-01-10 17:12:12 main.py:444] INFO     EPEs　　[3600/4370] Stage 0 = 0.53(0.81)
+[2021-01-10 17:12:12 main.py:447] INFO     thres1　　[3600/4370] Stage 0 = 0.084(0.091)
+[2021-01-10 17:13:48 main.py:444] INFO     EPEs　　[4000/4370] Stage 0 = 0.75(0.79)
+[2021-01-10 17:13:48 main.py:447] INFO     thres1　　[4000/4370] Stage 0 = 0.090(0.089)
+[2021-01-10 17:15:17 main.py:458] INFO     => Mean inference time for 4370 images: 0.222s
+[2021-01-10 17:15:17 main.py:461] INFO     Average test EPE = Stage 0=0.77
+[2021-01-10 17:15:17 main.py:466] INFO     Average test thres1 = Stage 0=0.087
+[2021-01-10 17:15:17 main.py:227] INFO     This is 31-th epoch
+[2021-01-10 17:15:19 main.py:321] INFO     losses　　Epoch31 [0/2216] Stage 0 = 1.00(1.00)	Stage 1 = 0.84(0.84)	Stage 2 = 0.82(0.82)	Stage 3 = 0.77(0.77)	Stage 4 = 0.67(0.67)
+[2021-01-10 17:15:19 main.py:327] INFO     losses_pix　　Epoch31 [0/2216] Stage 0 = 0.170(0.170)	Stage 1 = 0.154(0.154)	Stage 2 = 0.153(0.153)	Stage 3 = 0.132(0.132)	Stage 4 = 0.125(0.125)
+[2021-01-10 17:25:12 main.py:321] INFO     losses　　Epoch31 [400/2216] Stage 0 = 1.62(1.42)	Stage 1 = 1.43(1.23)	Stage 2 = 1.32(1.17)	Stage 3 = 1.26(1.12)	Stage 4 = 1.17(1.01)
+[2021-01-10 17:25:12 main.py:327] INFO     losses_pix　　Epoch31 [400/2216] Stage 0 = 0.238(0.197)	Stage 1 = 0.219(0.181)	Stage 2 = 0.215(0.178)	Stage 3 = 0.183(0.153)	Stage 4 = 0.177(0.146)
+[2021-01-10 17:35:07 main.py:321] INFO     losses　　Epoch31 [800/2216] Stage 0 = 1.53(1.41)	Stage 1 = 1.41(1.22)	Stage 2 = 1.37(1.16)	Stage 3 = 1.31(1.11)	Stage 4 = 1.15(1.01)
+[2021-01-10 17:35:07 main.py:327] INFO     losses_pix　　Epoch31 [800/2216] Stage 0 = 0.195(0.196)	Stage 1 = 0.183(0.181)	Stage 2 = 0.181(0.177)	Stage 3 = 0.156(0.153)	Stage 4 = 0.147(0.146)
+[2021-01-10 17:45:01 main.py:321] INFO     losses　　Epoch31 [1200/2216] Stage 0 = 1.65(1.39)	Stage 1 = 1.09(1.21)	Stage 2 = 0.97(1.15)	Stage 3 = 0.92(1.10)	Stage 4 = 0.86(0.99)
+[2021-01-10 17:45:01 main.py:327] INFO     losses_pix　　Epoch31 [1200/2216] Stage 0 = 0.219(0.195)	Stage 1 = 0.196(0.179)	Stage 2 = 0.186(0.175)	Stage 3 = 0.165(0.151)	Stage 4 = 0.159(0.144)
+[2021-01-10 17:54:56 main.py:321] INFO     losses　　Epoch31 [1600/2216] Stage 0 = 1.42(1.40)	Stage 1 = 1.20(1.21)	Stage 2 = 1.08(1.15)	Stage 3 = 1.03(1.10)	Stage 4 = 0.90(1.00)
+[2021-01-10 17:54:56 main.py:327] INFO     losses_pix　　Epoch31 [1600/2216] Stage 0 = 0.207(0.195)	Stage 1 = 0.195(0.179)	Stage 2 = 0.190(0.175)	Stage 3 = 0.161(0.151)	Stage 4 = 0.152(0.144)
+[2021-01-10 18:04:48 main.py:321] INFO     losses　　Epoch31 [2000/2216] Stage 0 = 0.87(1.40)	Stage 1 = 0.76(1.21)	Stage 2 = 0.74(1.15)	Stage 3 = 0.68(1.10)	Stage 4 = 0.61(1.00)
+[2021-01-10 18:04:48 main.py:327] INFO     losses_pix　　Epoch31 [2000/2216] Stage 0 = 0.175(0.195)	Stage 1 = 0.157(0.179)	Stage 2 = 0.157(0.175)	Stage 3 = 0.131(0.151)	Stage 4 = 0.125(0.144)
+[2021-01-10 18:10:07 main.py:335] INFO     Average train loss = Stage 0 = 1.40	Stage 1 = 1.21	Stage 2 = 1.16	Stage 3 = 1.10	Stage 4 = 1.00
+[2021-01-10 18:10:07 main.py:338] INFO     Average train thres1 = Stage 0 = 0.195	Stage 1 = 0.179	Stage 2 = 0.175	Stage 3 = 0.151	Stage 4 = 0.144
+[2021-01-10 18:10:07 main.py:227] INFO     This is 32-th epoch
+[2021-01-10 18:10:09 main.py:321] INFO     losses　　Epoch32 [0/2216] Stage 0 = 2.14(2.14)	Stage 1 = 1.93(1.93)	Stage 2 = 1.84(1.84)	Stage 3 = 1.78(1.78)	Stage 4 = 1.63(1.63)
+[2021-01-10 18:10:09 main.py:327] INFO     losses_pix　　Epoch32 [0/2216] Stage 0 = 0.274(0.274)	Stage 1 = 0.262(0.262)	Stage 2 = 0.260(0.260)	Stage 3 = 0.230(0.230)	Stage 4 = 0.220(0.220)
+[2021-01-10 18:20:04 main.py:321] INFO     losses　　Epoch32 [400/2216] Stage 0 = 1.32(1.43)	Stage 1 = 1.19(1.24)	Stage 2 = 1.17(1.18)	Stage 3 = 1.11(1.13)	Stage 4 = 0.98(1.02)
+[2021-01-10 18:20:04 main.py:327] INFO     losses_pix　　Epoch32 [400/2216] Stage 0 = 0.193(0.197)	Stage 1 = 0.181(0.181)	Stage 2 = 0.178(0.176)	Stage 3 = 0.154(0.152)	Stage 4 = 0.145(0.145)
+[2021-01-10 18:29:58 main.py:321] INFO     losses　　Epoch32 [800/2216] Stage 0 = 1.06(1.40)	Stage 1 = 0.95(1.21)	Stage 2 = 0.95(1.16)	Stage 3 = 0.90(1.11)	Stage 4 = 0.81(1.00)
+[2021-01-10 18:29:58 main.py:327] INFO     losses_pix　　Epoch32 [800/2216] Stage 0 = 0.160(0.196)	Stage 1 = 0.135(0.179)	Stage 2 = 0.134(0.175)	Stage 3 = 0.109(0.152)	Stage 4 = 0.102(0.145)
+[2021-01-10 18:39:54 main.py:321] INFO     losses　　Epoch32 [1200/2216] Stage 0 = 1.87(1.41)	Stage 1 = 1.70(1.22)	Stage 2 = 1.79(1.17)	Stage 3 = 1.73(1.11)	Stage 4 = 1.64(1.01)
+[2021-01-10 18:39:54 main.py:327] INFO     losses_pix　　Epoch32 [1200/2216] Stage 0 = 0.212(0.197)	Stage 1 = 0.202(0.180)	Stage 2 = 0.199(0.176)	Stage 3 = 0.172(0.152)	Stage 4 = 0.164(0.145)
+[2021-01-10 18:49:48 main.py:321] INFO     losses　　Epoch32 [1600/2216] Stage 0 = 2.25(1.41)	Stage 1 = 2.02(1.22)	Stage 2 = 1.96(1.16)	Stage 3 = 1.92(1.11)	Stage 4 = 1.80(1.01)
+[2021-01-10 18:49:48 main.py:327] INFO     losses_pix　　Epoch32 [1600/2216] Stage 0 = 0.253(0.196)	Stage 1 = 0.241(0.180)	Stage 2 = 0.239(0.176)	Stage 3 = 0.215(0.152)	Stage 4 = 0.209(0.145)
+[2021-01-10 18:59:38 main.py:321] INFO     losses　　Epoch32 [2000/2216] Stage 0 = 0.99(1.40)	Stage 1 = 0.84(1.22)	Stage 2 = 0.79(1.16)	Stage 3 = 0.74(1.11)	Stage 4 = 0.64(1.01)
+[2021-01-10 18:59:38 main.py:327] INFO     losses_pix　　Epoch32 [2000/2216] Stage 0 = 0.149(0.195)	Stage 1 = 0.138(0.179)	Stage 2 = 0.132(0.175)	Stage 3 = 0.111(0.151)	Stage 4 = 0.101(0.144)
+[2021-01-10 19:04:55 main.py:335] INFO     Average train loss = Stage 0 = 1.41	Stage 1 = 1.22	Stage 2 = 1.17	Stage 3 = 1.11	Stage 4 = 1.01
+[2021-01-10 19:04:55 main.py:338] INFO     Average train thres1 = Stage 0 = 0.196	Stage 1 = 0.180	Stage 2 = 0.176	Stage 3 = 0.152	Stage 4 = 0.145
+[2021-01-10 19:04:55 main.py:227] INFO     This is 33-th epoch
+[2021-01-10 19:04:57 main.py:321] INFO     losses　　Epoch33 [0/2216] Stage 0 = 1.32(1.32)	Stage 1 = 1.15(1.15)	Stage 2 = 1.11(1.11)	Stage 3 = 1.06(1.06)	Stage 4 = 0.95(0.95)
+[2021-01-10 19:04:57 main.py:327] INFO     losses_pix　　Epoch33 [0/2216] Stage 0 = 0.194(0.194)	Stage 1 = 0.175(0.175)	Stage 2 = 0.177(0.177)	Stage 3 = 0.151(0.151)	Stage 4 = 0.143(0.143)
+[2021-01-10 19:14:47 main.py:321] INFO     losses　　Epoch33 [400/2216] Stage 0 = 1.33(1.43)	Stage 1 = 1.24(1.24)	Stage 2 = 1.25(1.18)	Stage 3 = 1.20(1.13)	Stage 4 = 1.09(1.02)
+[2021-01-10 19:14:47 main.py:327] INFO     losses_pix　　Epoch33 [400/2216] Stage 0 = 0.169(0.197)	Stage 1 = 0.162(0.181)	Stage 2 = 0.162(0.177)	Stage 3 = 0.137(0.153)	Stage 4 = 0.129(0.146)
+[2021-01-10 19:24:37 main.py:321] INFO     losses　　Epoch33 [800/2216] Stage 0 = 2.07(1.43)	Stage 1 = 1.77(1.23)	Stage 2 = 1.62(1.17)	Stage 3 = 1.56(1.12)	Stage 4 = 1.50(1.02)
+[2021-01-10 19:24:37 main.py:327] INFO     losses_pix　　Epoch33 [800/2216] Stage 0 = 0.204(0.197)	Stage 1 = 0.189(0.181)	Stage 2 = 0.183(0.177)	Stage 3 = 0.161(0.153)	Stage 4 = 0.155(0.146)
+[2021-01-10 19:34:28 main.py:321] INFO     losses　　Epoch33 [1200/2216] Stage 0 = 1.02(1.42)	Stage 1 = 0.92(1.23)	Stage 2 = 0.88(1.17)	Stage 3 = 0.83(1.12)	Stage 4 = 0.75(1.01)
+[2021-01-10 19:34:28 main.py:327] INFO     losses_pix　　Epoch33 [1200/2216] Stage 0 = 0.161(0.196)	Stage 1 = 0.147(0.180)	Stage 2 = 0.145(0.176)	Stage 3 = 0.121(0.152)	Stage 4 = 0.114(0.145)
+[2021-01-10 19:44:20 main.py:321] INFO     losses　　Epoch33 [1600/2216] Stage 0 = 1.23(1.41)	Stage 1 = 1.06(1.22)	Stage 2 = 1.00(1.16)	Stage 3 = 0.96(1.11)	Stage 4 = 0.87(1.01)
+[2021-01-10 19:44:20 main.py:327] INFO     losses_pix　　Epoch33 [1600/2216] Stage 0 = 0.206(0.195)	Stage 1 = 0.185(0.179)	Stage 2 = 0.182(0.175)	Stage 3 = 0.165(0.151)	Stage 4 = 0.158(0.144)
+[2021-01-10 19:54:13 main.py:321] INFO     losses　　Epoch33 [2000/2216] Stage 0 = 1.21(1.41)	Stage 1 = 1.03(1.22)	Stage 2 = 1.02(1.16)	Stage 3 = 0.97(1.11)	Stage 4 = 0.90(1.00)
+[2021-01-10 19:54:13 main.py:327] INFO     losses_pix　　Epoch33 [2000/2216] Stage 0 = 0.192(0.195)	Stage 1 = 0.174(0.179)	Stage 2 = 0.171(0.175)	Stage 3 = 0.151(0.151)	Stage 4 = 0.144(0.144)
+[2021-01-10 19:59:31 main.py:335] INFO     Average train loss = Stage 0 = 1.40	Stage 1 = 1.22	Stage 2 = 1.16	Stage 3 = 1.10	Stage 4 = 1.00
+[2021-01-10 19:59:31 main.py:338] INFO     Average train thres1 = Stage 0 = 0.195	Stage 1 = 0.179	Stage 2 = 0.174	Stage 3 = 0.151	Stage 4 = 0.144
+[2021-01-10 19:59:31 main.py:227] INFO     This is 34-th epoch
+[2021-01-10 19:59:33 main.py:321] INFO     losses　　Epoch34 [0/2216] Stage 0 = 2.12(2.12)	Stage 1 = 1.74(1.74)	Stage 2 = 1.39(1.39)	Stage 3 = 1.33(1.33)	Stage 4 = 1.23(1.23)
+[2021-01-10 19:59:33 main.py:327] INFO     losses_pix　　Epoch34 [0/2216] Stage 0 = 0.238(0.238)	Stage 1 = 0.221(0.221)	Stage 2 = 0.219(0.219)	Stage 3 = 0.198(0.198)	Stage 4 = 0.191(0.191)
+[2021-01-10 20:09:26 main.py:321] INFO     losses　　Epoch34 [400/2216] Stage 0 = 0.76(1.41)	Stage 1 = 0.72(1.22)	Stage 2 = 0.71(1.17)	Stage 3 = 0.67(1.12)	Stage 4 = 0.59(1.01)
+[2021-01-10 20:09:26 main.py:327] INFO     losses_pix　　Epoch34 [400/2216] Stage 0 = 0.132(0.195)	Stage 1 = 0.122(0.179)	Stage 2 = 0.121(0.175)	Stage 3 = 0.100(0.151)	Stage 4 = 0.093(0.144)
+[2021-01-10 20:19:19 main.py:321] INFO     losses　　Epoch34 [800/2216] Stage 0 = 1.92(1.42)	Stage 1 = 1.76(1.23)	Stage 2 = 1.50(1.17)	Stage 3 = 1.43(1.12)	Stage 4 = 1.28(1.02)
+[2021-01-10 20:19:19 main.py:327] INFO     losses_pix　　Epoch34 [800/2216] Stage 0 = 0.210(0.196)	Stage 1 = 0.198(0.180)	Stage 2 = 0.194(0.176)	Stage 3 = 0.165(0.152)	Stage 4 = 0.157(0.145)
+[2021-01-10 20:29:12 main.py:321] INFO     losses　　Epoch34 [1200/2216] Stage 0 = 1.29(1.42)	Stage 1 = 1.12(1.23)	Stage 2 = 1.04(1.17)	Stage 3 = 0.99(1.12)	Stage 4 = 0.89(1.01)
+[2021-01-10 20:29:12 main.py:327] INFO     losses_pix　　Epoch34 [1200/2216] Stage 0 = 0.196(0.196)	Stage 1 = 0.187(0.180)	Stage 2 = 0.184(0.176)	Stage 3 = 0.158(0.152)	Stage 4 = 0.150(0.145)
+[2021-01-10 20:39:05 main.py:321] INFO     losses　　Epoch34 [1600/2216] Stage 0 = 1.30(1.41)	Stage 1 = 1.15(1.22)	Stage 2 = 1.03(1.16)	Stage 3 = 0.98(1.11)	Stage 4 = 0.89(1.00)
+[2021-01-10 20:39:05 main.py:327] INFO     losses_pix　　Epoch34 [1600/2216] Stage 0 = 0.177(0.195)	Stage 1 = 0.168(0.179)	Stage 2 = 0.166(0.175)	Stage 3 = 0.143(0.151)	Stage 4 = 0.135(0.144)
+[2021-01-10 20:48:58 main.py:321] INFO     losses　　Epoch34 [2000/2216] Stage 0 = 2.09(1.40)	Stage 1 = 1.78(1.22)	Stage 2 = 1.68(1.16)	Stage 3 = 1.62(1.11)	Stage 4 = 1.45(1.01)
+[2021-01-10 20:48:58 main.py:327] INFO     losses_pix　　Epoch34 [2000/2216] Stage 0 = 0.276(0.195)	Stage 1 = 0.253(0.179)	Stage 2 = 0.248(0.175)	Stage 3 = 0.218(0.151)	Stage 4 = 0.211(0.144)
+[2021-01-10 20:54:17 main.py:335] INFO     Average train loss = Stage 0 = 1.40	Stage 1 = 1.22	Stage 2 = 1.16	Stage 3 = 1.11	Stage 4 = 1.00
+[2021-01-10 20:54:17 main.py:338] INFO     Average train thres1 = Stage 0 = 0.195	Stage 1 = 0.179	Stage 2 = 0.175	Stage 3 = 0.151	Stage 4 = 0.144
+[2021-01-10 20:54:18 main.py:444] INFO     EPEs　　[0/4370] Stage 0 = 1.11(1.11)
+[2021-01-10 20:54:18 main.py:447] INFO     thres1　　[0/4370] Stage 0 = 0.155(0.155)
+[2021-01-10 20:55:54 main.py:444] INFO     EPEs　　[400/4370] Stage 0 = 0.64(0.93)
+[2021-01-10 20:55:54 main.py:447] INFO     thres1　　[400/4370] Stage 0 = 0.108(0.103)
+[2021-01-10 20:57:28 main.py:444] INFO     EPEs　　[800/4370] Stage 0 = 0.49(0.94)
+[2021-01-10 20:57:28 main.py:447] INFO     thres1　　[800/4370] Stage 0 = 0.067(0.103)
+[2021-01-10 20:59:04 main.py:444] INFO     EPEs　　[1200/4370] Stage 0 = 0.59(0.89)
+[2021-01-10 20:59:04 main.py:447] INFO     thres1　　[1200/4370] Stage 0 = 0.078(0.098)
+[2021-01-10 21:00:41 main.py:444] INFO     EPEs　　[1600/4370] Stage 0 = 0.55(0.83)
+[2021-01-10 21:00:41 main.py:447] INFO     thres1　　[1600/4370] Stage 0 = 0.078(0.093)
+[2021-01-10 21:02:16 main.py:444] INFO     EPEs　　[2000/4370] Stage 0 = 0.59(0.87)
+[2021-01-10 21:02:16 main.py:447] INFO     thres1　　[2000/4370] Stage 0 = 0.088(0.096)
+[2021-01-10 21:03:52 main.py:444] INFO     EPEs　　[2400/4370] Stage 0 = 0.37(0.83)
+[2021-01-10 21:03:52 main.py:447] INFO     thres1　　[2400/4370] Stage 0 = 0.040(0.092)
+[2021-01-10 21:05:28 main.py:444] INFO     EPEs　　[2800/4370] Stage 0 = 0.81(0.82)
+[2021-01-10 21:05:28 main.py:447] INFO     thres1　　[2800/4370] Stage 0 = 0.093(0.093)
+[2021-01-10 21:07:04 main.py:444] INFO     EPEs　　[3200/4370] Stage 0 = 0.50(0.82)
+[2021-01-10 21:07:04 main.py:447] INFO     thres1　　[3200/4370] Stage 0 = 0.051(0.092)
+[2021-01-10 21:08:40 main.py:444] INFO     EPEs　　[3600/4370] Stage 0 = 0.52(0.79)
+[2021-01-10 21:08:40 main.py:447] INFO     thres1　　[3600/4370] Stage 0 = 0.082(0.089)
+[2021-01-10 21:10:16 main.py:444] INFO     EPEs　　[4000/4370] Stage 0 = 0.74(0.77)
+[2021-01-10 21:10:16 main.py:447] INFO     thres1　　[4000/4370] Stage 0 = 0.089(0.088)
+[2021-01-10 21:11:45 main.py:458] INFO     => Mean inference time for 4370 images: 0.221s
+[2021-01-10 21:11:45 main.py:461] INFO     Average test EPE = Stage 0=0.76
+[2021-01-10 21:11:45 main.py:466] INFO     Average test thres1 = Stage 0=0.086
+[2021-01-10 21:11:45 main.py:253] INFO     full training time = 33.36 Hours
