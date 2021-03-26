@@ -120,6 +120,7 @@ class myImageFloder(data.Dataset):
 
         #print("left path:", left)
         left_img = self.loader(left)
+        #print("left_img0:", np.asarray(left_img))
         right_img = self.loader(right)
         dataL = self.dploader(disp_L)
 
@@ -144,11 +145,13 @@ class myImageFloder(data.Dataset):
 
            processed = get_transform(augment=False)
 
-
+           # print("left size:", left_img)
            left_img   = processed(left_img)
            right_img  = processed(right_img)
+           #print("left_img1:", np.asarray(left_img))
 
            return left_img, right_img, dataL
+
         else:
            w, h = left_img.size
 

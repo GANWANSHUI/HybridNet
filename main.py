@@ -38,12 +38,13 @@ parser.add_argument('--CSPN_step', type=int, default=4, help='CSPN iteration tim
 
 # data path
 parser.add_argument('--datapath', default='/data6/wsgan/SenceFlow/train/', help='datapath')
-parser.add_argument('--save_path', type=str, default='./result/PSMNet/sceneflow/supervised/', help='the path of saving result')
-parser.add_argument('--resume', type=str, default= None, help='resume path')
+parser.add_argument('--save_path', type=str, default='./result/sceneflow/TEST/', help='the path of saving result')
+parser.add_argument('--resume', type=str, default= './result/sceneflow/checkpoint_34.tar', help='resume path')
 
 # train setting
-parser.add_argument('--train', type =bool, default=True,  help='train or test ')
-parser.add_argument('--supervise_types', type=str, default='supervised', help='supervise_types :  supervised, self_supervised')
+parser.add_argument('--train', type =bool, default=False,  help='train or test ')
+parser.add_argument('--supervise_types', type=str, default='supervised', help='supervise_types :  supervised, semi_supervised,  self_supervised')
+parser.add_argument('--disparity_mask', type =bool, default=False,  help='train or test ')
 parser.add_argument('--print_freq', type=int, default=400, help='print frequence')
 parser.add_argument('--epochs', type=int, default=35, help='number of epochs to train')
 parser.add_argument('--train_bsize', type=int, default=2, help='batch size for training (default: 12), 2 for DDP')
@@ -52,11 +53,11 @@ parser.add_argument('--cost_volume', type=str, default='Difference', help='cost_
 parser.add_argument('--with_residual_cost', type =bool, default=True,  help='with residual cost network or not')
 parser.add_argument('--with_cspn', type =bool, default=True,  help='with cspn network or not')
 parser.add_argument('--count_flops', type =bool, default=False,  help='with count flops or not')
-parser.add_argument('--model_types', type=str, default='PSMNet', help='model_types: PSMNet, PSMNet_DSM, Hybrid_Net, Hybrid_Net_DSM')
+parser.add_argument('--model_types', type=str, default='Hybrid_Net_DSM', help='model_types: PSMNet, PSMNet_DSM, Hybrid_Net, Hybrid_Net_DSM')
 parser.add_argument('--activation_types1', type=str, default='ELU', help='(for feature extraction) : ELU, Relu, Mish ')
 parser.add_argument('--activation_types2', type=str, default='Relu', help='(for feature aggregation): ELU, Relu, Mish ')
-parser.add_argument('--conv_3d_types1', type=str, default='3D', help='model_types: 3D, P3D, DSM, 2D')
-parser.add_argument('--conv_3d_types2', type=str, default='3D', help='model_types: 3D, P3D, DSM, 2D')
+parser.add_argument('--conv_3d_types1', type=str, default='DSM', help='model_types: 3D, P3D, DSM, 2D')
+parser.add_argument('--conv_3d_types2', type=str, default='2D', help='model_types: 3D, P3D, DSM, 2D')
 
 # distribute related parameters
 parser.add_argument("--local_rank", default=0, type=int)
@@ -280,7 +281,7 @@ def train(dataloader, model, optimizer, log, epoch=0):
             continue
 
         mask.detach_()
-        outputs, self_superised_loss = model(imgL, imgR)
+        outputs, self_superised_loss = model(imgL, imgR, disp_L)
 
 
         outputs = [torch.squeeze(output, 1) for output in outputs]
@@ -293,12 +294,14 @@ def train(dataloader, model, optimizer, log, epoch=0):
 
 
         if args.supervise_types == 'self_supervised':
-            sum_loss = sum(self_superised_loss)
 
+            GT_loss = sum(loss)
+            sum_loss = sum(self_superised_loss) + GT_loss
 
 
         else:
             sum_loss =sum(loss)
+
 
         with amp.scale_loss(sum_loss, optimizer) as scaled_loss:
             scaled_loss.backward()
@@ -423,7 +426,7 @@ def test(dataloader, model, log):
 
             time_start = time.perf_counter()
 
-            outputs, self_supervised_loss = model(imgL, imgR)
+            outputs, self_supervised_loss = model(imgL, imgR, disp_L)
             outputs = [outputs[-1]]
 
             single_inference_time = time.perf_counter() - time_start

@@ -91,8 +91,7 @@ def aanet_augment(img_height, img_width):
 
 
 
-def get_transform(name='imagenet', input_size=None,
-                  scale_size=None, normalize=None, augment=True):
+def get_transform(augment=True):
 
     normalize = __imagenet_stats
     input_size = 256

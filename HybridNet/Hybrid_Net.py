@@ -32,9 +32,11 @@ class Hybrid_Net(nn.Module):
         self.conv_3d_types2 = args.conv_3d_types2
         self.CSPN_step = args.CSPN_step
         self.supervise_types = args.supervise_types
+        self.disparity_mask =  args.disparity_mask
+        self.denormalization = args.denormalization
 
-        if self.supervise_types == "self_supervised":
-            self.self_supervised_loss = self_supervised_loss()
+        if self.supervise_types == "self_supervised" or self.supervise_types == "semi_supervised":
+            self.self_supervised_loss = self_supervised_loss(denormalization =self.denormalization, disparity_mask = self.disparity_mask)
 
         self.feature_extraction = Hybrid_Net_feature(activation_types1=self.activation_types1)    # channel = 32   16    8
 
@@ -125,7 +127,7 @@ class Hybrid_Net(nn.Module):
                                   norm_type=cspn_config['norm_type'])
 
 
-    def forward(self, left, right):
+    def forward(self, left, right, dispL):
 
 
         img_size = left.size()
@@ -200,11 +202,14 @@ class Hybrid_Net(nn.Module):
 
         # output
 
-        if self.supervise_types == "self_supervised":
+        if self.supervise_types == "self_supervised" or self.supervise_types == "semi_supervised":
 
-            self_supervised_loss = self.self_supervised_loss(pred, left, right)
+
+            self_supervised_loss = self.self_supervised_loss(pred, left, right, dispL)
 
         else:
+
+
             self_supervised_loss = []
 
         return pred, self_supervised_loss

@@ -34,33 +34,38 @@ parser.add_argument('--loss_weights', type=float, nargs='+', default=[0.5, 0.7, 
 parser.add_argument('--residual_disparity_range', type=int, default=3)
 parser.add_argument('--datapath2015', default='/data6/wsgan/KITTI/KITTI2015/training/', help='datapath')
 parser.add_argument('--datapath2012', default='/data6/wsgan/KITTI/KITTI2012/training/', help='datapath')
-parser.add_argument('--lr', type=float, default=0.0002, help='learning rate')
-parser.add_argument('--split_for_val', type =bool, default=False,  help='finetune for submission or for validation')
+parser.add_argument('--lr', type=float, default=0.001, help='learning rate')
+parser.add_argument('--split_for_val', type =bool, default=True,  help='finetune for submission or for validation')
 parser.add_argument('--epochs', type=int, default=1001, help='number of epochs to train')
 parser.add_argument('--train_bsize', type=int, default=2, help='batch size for training (default: 12)')
 parser.add_argument('--test_bsize', type=int, default=1, help='batch size for testing (default: 8)')
-parser.add_argument('--save_path', type=str, default='./result/finetune/2012/',help='the path of saving checkpoints and log')
-parser.add_argument('--datatype', default='2012', help='finetune dataset: 2012, 2015, mix')
-parser.add_argument('--resume', type=str, default=None, help='resume path')
-parser.add_argument('--pretrained', type=str, default='./result/finetune/mixed/finetune_1000.tar', help='pretrained model path')
 
+parser.add_argument('--datatype', default='2015', help='finetune dataset: 2012, 2015, mix')
+parser.add_argument('--resume', type=str, default=None, help='resume path')
+parser.add_argument('--pretrained', type=str, default='./result/sceneflow/checkpoint_34.tar', help='pretrained model path')
 parser.add_argument('--print_freq', type=int, default=10, help='print frequence')
 parser.add_argument('--seed', default=1, type=int, help='Random seed for reproducibility')
 parser.add_argument('--cost_volume', type=str, default='Difference', help='cost_volume type :  "Concat" , "Difference" or "Distance_based" ')
 parser.add_argument('--with_residual_cost', type =bool, default=True,  help='with residual cost network or not')
 parser.add_argument('--with_cspn', type =bool, default=True,  help='with cspn network or not')
-
 parser.add_argument('--model_types', type=str, default='Hybrid_Net_DSM', help='model_types: PSMNet, PSMNet_DSM, Hybrid_Net, Hybrid_Net_DSM')
-
 parser.add_argument('--activation_types1', type=str, default='ELU', help='activation_function_types (for feature extraction) : ELU, Relu, Mish ')
 parser.add_argument('--activation_types2', type=str, default='Relu', help='activation_function_types (for feature aggregation): ELU, Relu, Mish ')
 parser.add_argument('--conv_3d_types1', type=str, default='DSM', help='model_types: 3D, P3D, DSM, 2D')
 parser.add_argument('--conv_3d_types2', type=str, default='2D', help='model_types: 3D, P3D, DSM, 2D')
-parser.add_argument('--supervise_types', type=str, default='supervised', help='supervise_types :  supervised, self_supervised')
+
+parser.add_argument('--save_path', type=str, default='./result/test/',help='the path of saving checkpoints and log')
+parser.add_argument('--supervise_types', type=str, default='semi_supervised', help='supervise_types: supervised, semi_supervised, self_supervised')
 
 parser.add_argument('--train', type =bool, default=True,  help='train or test ')
-parser.add_argument('--CSPN_step', type=int, default=4, help='CSPN iteration times')
 
+parser.add_argument('--disparity_mask', type =bool, default=False,  help='Replace with gt disparity in self_supervised loss ')
+parser.add_argument('--denormalization', type =bool, default=True,  help='denormalization the img in self_supervised loss ')
+
+
+parser.add_argument('--loss_weight', type=float, default=0.2, help='for balancing the loss')
+
+parser.add_argument('--CSPN_step', type=int, default=4, help='CSPN iteration times')
 
 # distribute related argument
 parser.add_argument("--local_rank", default=0, type=int)
@@ -72,19 +77,19 @@ parser.add_argument('--distributed', type =bool, default=True,  help='distribute
 parser.add_argument('--deterministic', action='store_true')
 
 
-
 args = parser.parse_args()
 
+# sudo fuser -v /dev/nvidia* |awk '{for(i=1;i<=NF;i++)print "kill -9 " $i;}' | sudo sh
+
 # CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python finetune.py
+
 # CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m torch.distributed.launch --nproc_per_node=8 finetune.py
 
 
 log = logger.setup_logger(args.save_path + '/training.log')
-
 print("opt_level = {}".format(args.opt_level))
 print("keep_batchnorm_fp32 = {}".format(args.keep_batchnorm_fp32), type(args.keep_batchnorm_fp32))
 print("loss_scale = {}".format(args.loss_scale), type(args.loss_scale))
-
 print("\nCUDNN VERSION: {}\n".format(torch.backends.cudnn.version()))
 
 
@@ -109,8 +114,6 @@ def main(log):
 
     assert torch.backends.cudnn.enabled, "Amp requires cudnn backend to be enabled."
 
-
-
     if args.model_types == "PSMNet":
         model = PSMNet(args)
         args.loss_weights = [0.5, 0.7, 1.]
@@ -125,7 +128,6 @@ def main(log):
 
     else:
         AssertionError("model error")
-
 
 
     if args.datatype == '2015':
@@ -282,46 +284,48 @@ def main(log):
 
 
 
-        ## Test ##
-        inference_time = 0
+        if epoch % 50 == 0:
+            ## Test ##
+            inference_time = 0
 
-        for batch_idx, (imgL, imgR, disp_L) in enumerate(TestImgLoader):
-
-
-            epe, d1, single_inference_time = test(imgL, imgR, disp_L, model)
-
-            inference_time += single_inference_time
-
-            total_d1 += d1
-            total_epe += epe
-
-            if args.distributed:
-                total_epe = reduce_tensor(total_epe.data)
-
-                total_d1 = reduce_tensor(total_d1.data)
+            for batch_idx, (imgL, imgR, disp_L) in enumerate(TestImgLoader):
 
 
-            else:
+                epe, d1, single_inference_time = test(imgL, imgR, disp_L, model)
 
-                total_epe = total_epe
-                total_d1 = total_d1
+                inference_time += single_inference_time
+
+                total_d1 += d1
+                total_epe += epe
+
+                if args.distributed:
+                    total_epe = reduce_tensor(total_epe.data)
+
+                    total_d1 = reduce_tensor(total_d1.data)
 
 
-        if args.local_rank == 0:
-            log.info('epoch %d avg_3-px error in val = %.3f' % (epoch, total_d1 / num_test * 100))
-            log.info('epoch %d avg_epe  in val = %.3f' % (epoch, total_epe / num_test))
-            log.info(('=> Mean inference time for %d images: %.3fs' % (num_test, inference_time / num_test)))
+                else:
+
+                    total_epe = total_epe
+                    total_d1 = total_d1
 
 
-        if args.local_rank == 0:
-            if epoch % 100 == 0:
-                savefilename = args.save_path + '/finetune_' + str(epoch) + '.tar'
-                torch.save({
-                    'epoch': epoch,
-                    'state_dict': model.state_dict(),
-                    'train_loss': total_train_loss / len(TrainImgLoader),
-                    'test_loss': total_d1 / len(TestImgLoader) * 100,
-                }, savefilename)
+            if args.local_rank == 0:
+                log.info('epoch %d avg_3-px error in val = %.3f' % (epoch, total_d1 / num_test * 100))
+                log.info('epoch %d avg_epe  in val = %.3f' % (epoch, total_epe / num_test))
+                log.info(('=> Mean inference time for %d images: %.3fs' % (num_test, inference_time / num_test)))
+
+
+            if args.local_rank == 0:
+                if epoch % 100 == 0:
+                    savefilename = args.save_path + '/finetune_' + str(epoch) + '.tar'
+                    torch.save({
+                        'epoch': epoch,
+                        'state_dict': model.state_dict(),
+                        'train_loss': total_train_loss / len(TrainImgLoader),
+                        'test_loss': total_d1 / len(TestImgLoader) * 100,
+                    }, savefilename)
+
 
     if args.local_rank == 0:
         log.info('full finetune time = %.2f HR' % ((time.time() - start_full_time) / 3600))
@@ -348,7 +352,7 @@ def train(imgL, imgR, disp_L, model, optimizer):
     optimizer.zero_grad()
 
 
-    outputs, self_supervised_loss = model(imgL, imgR)
+    outputs, self_supervised_loss = model(imgL, imgR, disp_L)
 
 
     outputs = [torch.squeeze(output, 1) for output in outputs]
@@ -356,8 +360,34 @@ def train(imgL, imgR, disp_L, model, optimizer):
     loss = [args.loss_weights[x] * F.smooth_l1_loss(outputs[x][mask], disp_true[mask], size_average=True)
             for x in range(stages)]
 
+    if args.supervise_types == 'self_supervised':
 
-    sum_loss = sum(loss)
+        self_supervised_loss = sum(self_supervised_loss)
+        if args.local_rank == 0:
+            print('self_supervised_loss:', self_supervised_loss)
+        sum_loss = self_supervised_loss
+
+
+    elif args.supervise_types == 'semi_supervised':
+
+        GT_loss = sum(loss)
+        if args.local_rank == 0:
+            print("GT loss:", GT_loss)
+        self_supervised_loss = sum(self_supervised_loss)
+
+        if args.local_rank == 0:
+            print('self_supervised_loss:', self_supervised_loss)
+        sum_loss = args.loss_weight * self_supervised_loss + GT_loss
+
+
+    elif args.supervise_types == 'supervised':
+        sum_loss = sum(loss)
+
+
+    else:
+        AssertionError
+
+
 
     with amp.scale_loss(sum_loss, optimizer) as scaled_loss:
         scaled_loss.backward()
@@ -381,12 +411,12 @@ def test(imgL, imgR, disp_true, model):
 
     imgL = imgL.float().cuda()
     imgR = imgR.float().cuda()
-    disp_true = disp_true.float().cuda()
+    disp_L = disp_true.float().cuda()
 
     with torch.no_grad():
 
         time_start = time.perf_counter()
-        output3, self_supervised_loss = model(imgL, imgR)
+        output3, self_supervised_loss = model(imgL, imgR, disp_L)
         output3 = [output3[-1]]
         single_inference_time = time.perf_counter() - time_start
 
@@ -394,12 +424,12 @@ def test(imgL, imgR, disp_true, model):
     pred_disp = output3[-1].squeeze(1)
 
     # computing 3-px error#
-    mask = (disp_true > 0) & (disp_true < args.maxdisp)
+    mask = (disp_L > 0) & (disp_L < args.maxdisp)
 
 
 
-    epe = F.l1_loss(disp_true[mask], pred_disp[mask], reduction='mean')
-    d1 = d1_metric(pred_disp, disp_true, mask)
+    epe = F.l1_loss(disp_L[mask], pred_disp[mask], reduction='mean')
+    d1 = d1_metric(pred_disp, disp_L, mask)
 
 
     return epe, d1, single_inference_time
